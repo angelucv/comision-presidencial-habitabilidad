@@ -14,16 +14,21 @@
     <span class="ve-azul"></span>
     <span class="ve-rojo"></span>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-cpeh py-2">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-3" href="{% url 'core:home' %}">
-        <img src="{% static 'img/logo-cpeh.svg' %}" alt="" width="52" height="52">
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-cpeh">
+    <div class="container navbar-cpeh-inner">
+      <a class="navbar-brand" href="{% url 'core:home' %}">
+        <img src="{% static 'img/logo-cpeh.svg' %}" alt="CPEH" width="48" height="48">
         <span class="brand-tagline">
-          <span class="brand-title">{{ CPEH_NOMBRE_COMISION }} (CPEH)</span>
-          <small>Post-terremoto {{ CPEH_EVENTO_SISMO_FECHA }} · Evaluación de habitabilidad</small>
+          <span class="brand-title brand-title-full">{{ CPEH_NOMBRE_COMISION }} (CPEH)</span>
+          <span class="brand-title brand-title-short">
+            Comisión Presidencial<br>
+            <span class="brand-accent">Evaluación de Habitabilidad (CPEH)</span>
+          </span>
+          <small class="brand-subtitle">Post-terremoto {{ CPEH_EVENTO_SISMO_FECHA }}</small>
         </span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+              aria-controls="navMain" aria-expanded="false" aria-label="Menú">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMain">
@@ -44,7 +49,7 @@
     </div>
   </nav>
 
-  <main class="container flex-grow-1 py-4">
+  <main class="container flex-grow-1 py-3 py-md-4 px-3 px-sm-4">
     {% if messages %}
       {% for message in messages %}
         <div class="alert alert-{{ message.tags|default:'info' }} alert-dismissible fade show" role="alert">
