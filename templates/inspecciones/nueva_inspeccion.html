@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Nueva inspección{% endblock %}
+
+{% block content %}
+<h1 class="h4 mb-3">Iniciar inspección ERD</h1>
+<div class="card shadow-sm mb-4">
+  <div class="card-body">
+    <p class="mb-1"><strong>{{ edificacion.nombre }}</strong> · <code>{{ edificacion.codigo }}</code></p>
+    <p class="text-muted small mb-0">{{ edificacion.direccion }}, {{ edificacion.municipio }}</p>
+  </div>
+</div>
+<p>Inspector: <strong>{% if participante %}{{ participante.nombre_completo }}{% else %}{{ user.get_full_name|default:user.username }}{% endif %}</strong></p>
+<p class="small text-muted">Metodología planilla V.8 — pasos 0 a 8. Esta versión inicial registra notas por paso y cierra con semáforo.</p>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-primary btn-lg">Comenzar inspección</button>
+  <a href="{% url 'inspecciones:detalle_edificio' edificacion.pk %}" class="btn btn-link">Cancelar</a>
+</form>
+{% endblock %}

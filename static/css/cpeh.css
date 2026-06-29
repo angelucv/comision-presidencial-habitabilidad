@@ -464,3 +464,7 @@ span.home-inst-nombre {
 .comision-enlaces a:hover {
   text-decoration: underline;
 }
+
+.semaforo-badge-verde { background: #198754; }
+.semaforo-badge-amarillo { background: #ffc107; color: #212529; }
+.semaforo-badge-rojo { background: #dc3545; }

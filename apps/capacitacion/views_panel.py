@@ -1,10 +1,14 @@
 from django.contrib import messages
 from django.db.models import Count
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
 from django.views.decorators.http import require_http_methods
 
+from apps.inspecciones.forms import EdificacionForm
+from apps.inspecciones.models import Edificacion
+
+from .certificacion import certificar_inscripcion
 from .decorators import coordinador_required
 from .forms_panel import ImportarExcelForm
 from .models import Campana, Inscripcion, Sede, Sesion
@@ -68,6 +72,88 @@ def panel_sesiones(request):
         .order_by("-fecha", "hora")[:50]
     )
     return render(request, "capacitacion/panel/sesiones.html", {"sesiones": sesiones})
+
+
+@coordinador_required
+def panel_sesion_asistencia(request, sesion_id):
+    sesion = get_object_or_404(Sesion.objects.select_related("sede"), pk=sesion_id)
+    inscripciones = (
+        Inscripcion.objects.filter(sesion=sesion)
+        .select_related("participante")
+        .order_by("participante__apellidos", "participante__nombres")
+    )
+    return render(
+        request,
+        "capacitacion/panel/sesion_asistencia.html",
+        {"sesion": sesion, "inscripciones": inscripciones},
+    )
+
+
+@coordinador_required
+@require_http_methods(["POST"])
+def panel_marcar_asistencia(request, inscripcion_id):
+    inscripcion = get_object_or_404(Inscripcion, pk=inscripcion_id)
+    inscripcion.asistio = request.POST.get("asistio") == "1"
+    inscripcion.save(update_fields=["asistio"])
+    if request.headers.get("X-Requested-With") == "XMLHttpRequest":
+        return JsonResponse({"ok": True, "asistio": inscripcion.asistio})
+    messages.success(request, f"Asistencia actualizada — {inscripcion.participante.nombre_completo}")
+    return redirect("capacitacion:panel_sesion_asistencia", sesion_id=inscripcion.sesion_id)
+
+
+@coordinador_required
+@require_http_methods(["POST"])
+def panel_certificar_inscripcion(request, inscripcion_id):
+    inscripcion = get_object_or_404(
+        Inscripcion.objects.select_related("participante", "sesion__sede"),
+        pk=inscripcion_id,
+    )
+    if inscripcion.certificado_emitido:
+        messages.info(request, "Esta inscripción ya estaba certificada.")
+        return redirect("capacitacion:panel_sesion_asistencia", sesion_id=inscripcion.sesion_id)
+
+    encargado = request.POST.get("encargado_charla", "").strip()
+    user, clave, correo_ok = certificar_inscripcion(
+        inscripcion,
+        request.user,
+        encargado_charla=encargado,
+        request=request,
+    )
+    if correo_ok:
+        messages.success(
+            request,
+            f"Certificado emitido para {inscripcion.participante.nombre_completo}. "
+            f"Usuario «{user.username}» enviado por correo.",
+        )
+    elif inscripcion.participante.correo:
+        messages.warning(
+            request,
+            f"Certificado registrado y usuario «{user.username}» creado, "
+            f"pero no se pudo enviar el correo. Clave temporal: {clave}",
+        )
+    else:
+        messages.warning(
+            request,
+            f"Certificado registrado. Usuario: {user.username} · Clave temporal: {clave} "
+            f"(sin correo del participante).",
+        )
+    return redirect("capacitacion:panel_sesion_asistencia", sesion_id=inscripcion.sesion_id)
+
+
+@coordinador_required
+@require_http_methods(["GET", "POST"])
+def panel_edificios(request):
+    form = EdificacionForm(request.POST or None)
+    if request.method == "POST" and form.is_valid():
+        form.save()
+        messages.success(request, "Edificación registrada correctamente.")
+        return redirect("capacitacion:panel_edificios")
+    edificaciones = Edificacion.objects.order_by("-creado_en")[:50]
+    return render(
+        request,
+        "capacitacion/panel/edificios.html",
+        {"form": form, "edificaciones": edificaciones},
+    )
 
 
 @coordinador_required

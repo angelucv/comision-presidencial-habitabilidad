@@ -37,6 +37,8 @@
           <li class="nav-item"><a class="nav-link" href="{% url 'capacitacion_public:paso1' %}">Inscribirse</a></li>
           {% if user.is_staff %}
           <li class="nav-item"><a class="nav-link" href="{% url 'capacitacion:panel_inicio' %}">Panel</a></li>
+          {% elif user.is_authenticated %}
+          <li class="nav-item"><a class="nav-link" href="{% url 'inspecciones:inicio' %}">Inspecciones</a></li>
           {% endif %}
           <li class="nav-item">
             {% if user.is_authenticated %}

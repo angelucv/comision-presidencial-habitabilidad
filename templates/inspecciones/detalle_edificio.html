@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}{{ edificacion.nombre }}{% endblock %}
+
+{% block content %}
+<div class="mb-3">
+  <a href="{% url 'inspecciones:lista_edificios' %}" class="small">← Edificaciones</a>
+  <h1 class="h4 mt-2">{{ edificacion.nombre }}</h1>
+  <p class="text-muted mb-0"><code>{{ edificacion.codigo }}</code> · {{ edificacion.direccion }}, {{ edificacion.municipio }}, {{ edificacion.estado }}</p>
+</div>
+
+<div class="row g-3 mb-4">
+  <div class="col-md-6">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <dl class="row small mb-0">
+          <dt class="col-5">Estado inspección</dt>
+          <dd class="col-7">{{ edificacion.get_estado_inspeccion_display }}</dd>
+          <dt class="col-5">Semáforo</dt>
+          <dd class="col-7">{% if edificacion.semaforo %}{{ edificacion.get_semaforo_display }}{% else %}—{% endif %}</dd>
+          {% if edificacion.latitud %}
+          <dt class="col-5">Coordenadas</dt>
+          <dd class="col-7">{{ edificacion.latitud }}, {{ edificacion.longitud }}</dd>
+          {% endif %}
+        </dl>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 d-flex align-items-stretch">
+    {% if inspeccion_activa %}
+      <a href="{% url 'inspecciones:wizard' inspeccion_activa.pk %}" class="btn btn-primary btn-lg w-100 align-self-center">
+        Continuar inspección (paso {{ inspeccion_activa.paso_actual }})
+      </a>
+    {% elif edificacion.estado_inspeccion != "inspeccionado" %}
+      <a href="{% url 'inspecciones:nueva_inspeccion' edificacion.pk %}" class="btn btn-primary btn-lg w-100 align-self-center">
+        Iniciar inspección ERD
+      </a>
+    {% else %}
+      <div class="alert alert-success mb-0 w-100 align-self-center">Edificio ya inspeccionado.</div>
+    {% endif %}
+  </div>
+</div>
+
+{% if inspecciones %}
+<h2 class="h6">Historial</h2>
+<ul class="list-group shadow-sm">
+  {% for ins in inspecciones %}
+  <li class="list-group-item small">
+    {{ ins.iniciada_en|date:"d/m/Y H:i" }} — {{ ins.get_estado_display }}
+    {% if ins.semaforo %} · {{ ins.get_semaforo_display }}{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

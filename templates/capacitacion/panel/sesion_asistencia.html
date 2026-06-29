@@ -1,0 +1,79 @@
+{% extends "capacitacion/panel/base_panel.html" %}
+
+{% block title %}Asistencia — {{ sesion }}{% endblock %}
+
+{% block panel_content %}
+<div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-3">
+  <div>
+    <h1 class="h4 mb-1">Asistencia y certificación</h1>
+    <p class="text-muted small mb-0">
+      {{ sesion.sede.nombre }} · {{ sesion.fecha|date:"d/m/Y" }} · {{ sesion.hora|time:"H:i" }}
+    </p>
+    <p class="small mb-0">Encargado de la charla: <strong>{{ sesion.responsable_efectivo|default:"—" }}</strong></p>
+  </div>
+  <a href="{% url 'capacitacion:panel_sesiones' %}" class="btn btn-outline-secondary btn-sm">← Sesiones</a>
+</div>
+
+<div class="alert alert-light border small">
+  Marque asistencia y luego <strong>Certificar</strong>. El sistema crea usuario/contraseña y envía el certificado por correo
+  (contenido de la charla + acceso al portal de inspecciones).
+</div>
+
+<div class="table-responsive card shadow-sm border-0">
+  <table class="table table-sm mb-0 align-middle">
+    <thead>
+      <tr>
+        <th>Participante</th>
+        <th>C.I.</th>
+        <th>Correo</th>
+        <th>Código</th>
+        <th>Asistió</th>
+        <th>Certificado</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for ins in inscripciones %}
+      <tr>
+        <td>{{ ins.participante.nombre_completo }}</td>
+        <td>{{ ins.participante.cedula_display }}</td>
+        <td class="small">{{ ins.participante.correo|default:"—" }}</td>
+        <td><code>{{ ins.codigo }}</code></td>
+        <td>
+          <form method="post" action="{% url 'capacitacion:panel_marcar_asistencia' ins.pk %}" class="d-inline">
+            {% csrf_token %}
+            <input type="hidden" name="asistio" value="{% if ins.asistio %}0{% else %}1{% endif %}">
+            <button type="submit" class="btn btn-sm {% if ins.asistio %}btn-success{% else %}btn-outline-secondary{% endif %}">
+              {% if ins.asistio %}✓ Sí{% else %}Marcar{% endif %}
+            </button>
+          </form>
+        </td>
+        <td>
+          {% if ins.certificado_emitido %}
+            <span class="badge text-bg-success">Certificado</span>
+            {% if ins.certificado_en %}
+              <span class="small text-muted d-block">{{ ins.certificado_en|date:"d/m/Y H:i" }}</span>
+            {% endif %}
+          {% else %}
+            <span class="badge text-bg-secondary">Pendiente</span>
+          {% endif %}
+        </td>
+        <td class="text-end">
+          {% if not ins.certificado_emitido %}
+          <form method="post" action="{% url 'capacitacion:panel_certificar_inscripcion' ins.pk %}" class="d-inline">
+            {% csrf_token %}
+            <input type="hidden" name="encargado_charla" value="{{ sesion.responsable_efectivo }}">
+            <button type="submit" class="btn btn-sm btn-primary" {% if not ins.asistio %}title="Se marcará asistencia al certificar"{% endif %}>
+              Certificar
+            </button>
+          </form>
+          {% endif %}
+        </td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="7" class="p-4 text-muted">Sin inscripciones en esta sesión.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

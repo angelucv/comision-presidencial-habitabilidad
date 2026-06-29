@@ -11,6 +11,10 @@ class LoginCoordinadorView(auth_views.LoginView):
     def get_success_url(self):
         if self.request.user.is_staff:
             return reverse_lazy("capacitacion:panel_inicio")
+        from apps.cuentas.inspectores import usuario_es_inspector_certificado
+
+        if usuario_es_inspector_certificado(self.request.user):
+            return reverse_lazy("inspecciones:inicio")
         return reverse_lazy("core:home")
 
 

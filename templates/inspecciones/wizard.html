@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}Inspección — {{ titulo_paso }}{% endblock %}
+
+{% block content %}
+<div class="mb-3">
+  <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+    <div>
+      <h1 class="h5 mb-1">{{ edificacion.nombre }}</h1>
+      <p class="text-muted small mb-0">{{ titulo_paso }}</p>
+    </div>
+    <span class="badge text-bg-secondary">Paso {{ paso }} / {{ total_pasos }}</span>
+  </div>
+  <div class="progress mt-2" style="height:6px;">
+    <div class="progress-bar bg-primary" style="width: {% widthratio paso total_pasos 100 %}%"></div>
+  </div>
+</div>
+
+<form method="post">
+  {% csrf_token %}
+
+  {% if paso == 0 %}
+  <div class="alert alert-light border small">
+    <strong>Planilla V.8 — Información general.</strong> Confirme datos del edificio e inspector antes de continuar.
+  </div>
+  <dl class="row small card p-3 shadow-sm">
+    <dt class="col-sm-4">Edificio</dt><dd class="col-sm-8">{{ edificacion.nombre }} ({{ edificacion.codigo }})</dd>
+    <dt class="col-sm-4">Ubicación</dt><dd class="col-sm-8">{{ edificacion.direccion }}, {{ edificacion.municipio }}, {{ edificacion.estado }}</dd>
+    <dt class="col-sm-4">Inspector</dt><dd class="col-sm-8">{{ user.get_full_name|default:user.username }}</dd>
+  </dl>
+  {% elif paso == 1 %}
+  <p class="small text-muted">Inspección externa: colapso, edificios aledaños, geotecnia, asentamiento, inclinación (sin ingresar).</p>
+  {% elif paso == 6 %}
+  <p class="small text-muted">Si el riesgo externo es Alto, etiqueta roja y no continúe a inspección interna (regla ANIH).</p>
+  {% endif %}
+
+  <div class="mb-3">
+    <label class="form-label">Notas del paso</label>
+    <textarea name="notas" class="form-control" rows="4">{{ datos_paso.notas|default:"" }}</textarea>
+  </div>
+
+  {% if paso >= 1 and paso <= 2 %}
+  <div class="mb-3">
+    <label class="form-label">Riesgo externo preliminar</label>
+    <select name="riesgo_externo" class="form-select">
+      <option value="">—</option>
+      <option value="bajo" {% if datos_paso.riesgo_externo == "bajo" %}selected{% endif %}>A. Bajo</option>
+      <option value="medio" {% if datos_paso.riesgo_externo == "medio" %}selected{% endif %}>B. Medio</option>
+      <option value="alto" {% if datos_paso.riesgo_externo == "alto" %}selected{% endif %}>C. Alto → etiqueta roja</option>
+    </select>
+  </div>
+  {% endif %}
+
+  {% if paso == 8 %}
+  <hr>
+  <h2 class="h6">Cierre — semáforo de habitabilidad</h2>
+  <div class="mb-3">
+    <label class="form-label">Resultado</label>
+    <select name="semaforo" class="form-select" required>
+      <option value="">— Seleccione —</option>
+      {% for val, label in semaforos %}
+        <option value="{{ val }}">{{ label }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Observaciones de cierre</label>
+    <textarea name="observaciones_cierre" class="form-control" rows="3"></textarea>
+  </div>
+  {% endif %}
+
+  <div class="d-flex flex-wrap gap-2 mt-3">
+    {% if paso > 0 %}
+      <button type="submit" name="accion" value="anterior" class="btn btn-outline-secondary">← Anterior</button>
+    {% endif %}
+    {% if paso < 8 %}
+      <button type="submit" name="accion" value="siguiente" class="btn btn-primary">Siguiente →</button>
+    {% else %}
+      <button type="submit" name="accion" value="cerrar" class="btn btn-success">Completar inspección</button>
+    {% endif %}
+  </div>
+</form>
+{% endblock %}

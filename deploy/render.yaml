@@ -5,7 +5,7 @@ services:
     plan: free
     rootDir: .
     buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput
-    startCommand: python manage.py migrate --noinput && python manage.py ensure_superuser && python manage.py cargar_datos_iniciales && gunicorn config.wsgi:application
+    startCommand: python manage.py migrate --noinput && python manage.py ensure_superuser && python manage.py cargar_datos_iniciales && python manage.py cargar_edificios_demo && gunicorn config.wsgi:application
     envVars:
       - key: PYTHON_VERSION
         value: "3.12.0"

@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from django.utils.text import slugify
@@ -74,6 +75,11 @@ class Sesion(models.Model):
     cupo = models.PositiveIntegerField(default=80)
     estado = models.CharField(max_length=20, choices=Estado.choices, default=Estado.PROGRAMADA)
     responsable_nombre = models.CharField(max_length=200, blank=True)
+    contenido_induccion = models.TextField(
+        "Contenido de la charla",
+        blank=True,
+        help_text="Temas de la inducción ERD (aparece en el certificado).",
+    )
     creado_en = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -117,6 +123,13 @@ class Sesion(models.Model):
     def responsable_efectivo(self) -> str:
         return self.responsable_nombre or self.sede.responsable_efectivo()
 
+    def contenido_induccion_efectivo(self) -> str:
+        if self.contenido_induccion.strip():
+            return self.contenido_induccion.strip()
+        from apps.core.induccion_data import CONTENIDO_INDUCCION_ERD
+
+        return CONTENIDO_INDUCCION_ERD
+
 
 class Inscripcion(models.Model):
     codigo = models.CharField(max_length=20, unique=True, editable=False)
@@ -128,6 +141,19 @@ class Inscripcion(models.Model):
     )
     asistio = models.BooleanField(default=False)
     certificado_emitido = models.BooleanField(default=False)
+    certificado_en = models.DateTimeField(null=True, blank=True)
+    certificado_por = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="certificaciones_emitidas",
+    )
+    encargado_charla = models.CharField(
+        "Encargado de la charla (certificado)",
+        max_length=200,
+        blank=True,
+    )
     creado_en = models.DateTimeField(auto_now_add=True)
 
     class Meta:

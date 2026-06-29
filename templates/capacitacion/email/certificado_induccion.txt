@@ -1,0 +1,27 @@
+Estimado/a {{ participante.nombre_completo }},
+
+Felicitaciones. Se certifica que completó la inducción en Evaluación Rápida de Daños en Edificaciones (ERD / ANIH) y queda habilitado/a como inspector en el sistema CPEH.
+
+--- DATOS DE LA INDUCCIÓN ---
+Código inscripción: {{ inscripcion.codigo }}
+Sede: {{ sede.nombre }}
+Fecha: {{ sesion.fecha|date:"d/m/Y" }}
+Hora: {{ sesion.hora|time:"H:i" }}
+Encargado de la charla: {{ encargado_charla }}
+Certificado emitido: {{ inscripcion.certificado_en|date:"d/m/Y H:i" }}
+
+--- CONTENIDO DE LA CHARLA ---
+{{ contenido_charla }}
+
+--- ACCESO AL SISTEMA DE INSPECCIONES ---
+Usuario: {{ username }}
+Contraseña temporal: {{ clave_temporal }}
+
+Ingrese en: {{ login_url }}
+Portal de inspecciones: {{ inspecciones_url }}
+
+Por seguridad, cambie su contraseña después del primer acceso (desde el administrador del sistema o solicítelo al coordinador).
+
+Presente su cédula {{ participante.cedula_display }} cuando realice inspecciones en campo.
+
+{{ comision }}

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Mapa de edificaciones{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+  <div>
+    <h1 class="h4 mb-1">Mapa Venezuela — edificaciones</h1>
+    <p class="text-muted small mb-0">Propuesta inicial: ubicación geográfica y semáforo ERD por edificio inspeccionado.</p>
+  </div>
+  <a href="{% url 'capacitacion:panel_edificios' %}" class="btn btn-outline-secondary btn-sm">← Edificaciones</a>
+</div>
+
+<div class="row g-3 mb-3">
+  <div class="col-6 col-md-2"><div class="card text-center p-2"><div class="fw-bold">{{ stats.total }}</div><div class="small text-muted">Total</div></div></div>
+  <div class="col-6 col-md-2"><div class="card text-center p-2"><div class="fw-bold">{{ stats.pendientes }}</div><div class="small text-muted">Pendientes</div></div></div>
+  <div class="col-6 col-md-2"><div class="card text-center p-2"><div class="fw-bold">{{ stats.inspeccionados }}</div><div class="small text-muted">Inspeccionados</div></div></div>
+  <div class="col-6 col-md-2"><div class="card text-center p-2"><div class="fw-bold text-success">{{ stats.verdes }}</div><div class="small">Verde</div></div></div>
+  <div class="col-6 col-md-2"><div class="card text-center p-2"><div class="fw-bold text-warning">{{ stats.amarillos }}</div><div class="small">Amarillo</div></div></div>
+  <div class="col-6 col-md-2"><div class="card text-center p-2"><div class="fw-bold text-danger">{{ stats.rojos }}</div><div class="small">Rojo</div></div></div>
+</div>
+
+<div id="mapa-cpeh" class="rounded border shadow-sm mb-3" style="height: 520px;"></div>
+
+<div class="small text-muted">
+  <span class="d-inline-block me-3"><span class="semaforo-verde d-inline-block"></span> Habitable</span>
+  <span class="d-inline-block me-3"><span class="semaforo-amarillo d-inline-block"></span> Restringido</span>
+  <span class="d-inline-block me-3"><span class="semaforo-rojo d-inline-block"></span> No habitable</span>
+  <span class="d-inline-block"><span style="width:12px;height:12px;background:#6c757d;border-radius:50%;display:inline-block;"></span> Pendiente</span>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script>
+(function () {
+  const puntos = {{ puntos_json|safe }};
+  const map = L.map("mapa-cpeh").setView([{{ centro_lat }}, {{ centro_lon }}], {{ zoom }});
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 18,
+    attribution: "&copy; OpenStreetMap"
+  }).addTo(map);
+
+  const colores = { verde: "#198754", amarillo: "#ffc107", rojo: "#dc3545", pendiente: "#6c757d" };
+
+  puntos.forEach(function (p) {
+    const color = colores[p.semaforo] || colores.pendiente;
+    const marker = L.circleMarker([p.lat, p.lon], {
+      radius: 9,
+      fillColor: color,
+      color: "#fff",
+      weight: 2,
+      fillOpacity: 0.9
+    }).addTo(map);
+    marker.bindPopup(
+      "<strong>" + p.codigo + "</strong><br>" + p.nombre +
+      "<br><small>" + p.direccion + ", " + p.municipio + "</small>" +
+      "<br>Estado: " + p.estado_inspeccion +
+      (p.semaforo !== "pendiente" ? "<br>Semáforo: " + p.semaforo : "") +
+      '<br><a href="' + p.url + '">Ver ficha</a>'
+    );
+  });
+})();
+</script>
+{% endblock %}

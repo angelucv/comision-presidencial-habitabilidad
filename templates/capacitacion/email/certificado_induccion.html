@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<body style="font-family: Arial, sans-serif; color: #00247D; max-width: 600px;">
+  <div style="height:4px;background:linear-gradient(90deg,#FFCC00 33%,#00247D 33% 66%,#CF142B 66%);"></div>
+  <div style="background: #00247D; color: #fff; padding: 12px 20px;">
+    <div style="font-size:11px; letter-spacing:3px; color:#FFCC00;">★ ★ ★ ★ ★ ★ ★ ★</div>
+    <strong>CPEH</strong> — Certificado de inducción ERD
+  </div>
+  <div style="padding: 20px; border: 1px solid #e8ecf0;">
+    <p>Estimado/a <strong>{{ participante.nombre_completo }}</strong>,</p>
+    <p>Se certifica que completó la inducción en <strong>Evaluación Rápida de Daños en Edificaciones (ERD / ANIH)</strong> y queda habilitado/a como inspector.</p>
+
+    <h3 style="font-size:15px; color:#00247D; margin-top:20px;">Datos de la inducción</h3>
+    <table style="width:100%; border-collapse: collapse; margin: 8px 0 16px;">
+      <tr><td style="padding:4px 0; color:#666;">Código</td><td><strong>{{ inscripcion.codigo }}</strong></td></tr>
+      <tr><td style="padding:4px 0; color:#666;">Sede</td><td>{{ sede.nombre }}</td></tr>
+      <tr><td style="padding:4px 0; color:#666;">Fecha y hora</td><td>{{ sesion.fecha|date:"d/m/Y" }} · {{ sesion.hora|time:"H:i" }}</td></tr>
+      <tr><td style="padding:4px 0; color:#666;">Encargado de la charla</td><td><strong>{{ encargado_charla }}</strong></td></tr>
+      <tr><td style="padding:4px 0; color:#666;">Certificado emitido</td><td>{{ inscripcion.certificado_en|date:"d/m/Y H:i" }}</td></tr>
+    </table>
+
+    <h3 style="font-size:15px; color:#00247D;">Contenido de la charla</h3>
+    <div style="background:#f8f9fa; border-left:4px solid #00247D; padding:12px 14px; font-size:13px; white-space:pre-line; margin-bottom:16px;">{{ contenido_charla }}</div>
+
+    <h3 style="font-size:15px; color:#00247D;">Acceso al sistema</h3>
+    <div style="background:#eef3fb; padding:14px; border-radius:6px; margin-bottom:12px;">
+      <p style="margin:0 0 6px;"><strong>Usuario:</strong> {{ username }}</p>
+      <p style="margin:0 0 6px;"><strong>Contraseña temporal:</strong> {{ clave_temporal }}</p>
+      <p style="margin:12px 0 0;">
+        <a href="{{ login_url }}" style="background:#00247D;color:#fff;padding:10px 18px;text-decoration:none;border-radius:4px;display:inline-block;">Iniciar sesión</a>
+        &nbsp;
+        <a href="{{ inspecciones_url }}" style="color:#00247D;">Portal de inspecciones</a>
+      </p>
+    </div>
+    <p style="font-size:13px; color:#666;">C.I. {{ participante.cedula_display }} · Cambie su contraseña tras el primer acceso.</p>
+  </div>
+  <p style="font-size: 12px; color: #999; padding: 0 20px;">{{ comision }}</p>
+</body>
+</html>

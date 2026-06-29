@@ -24,7 +24,7 @@
         <td>{{ s.hora|time:"H:i" }}</td>
         <td>{{ s.num_inscritos }} / {{ s.cupo }}</td>
         <td>{{ s.get_estado_display }}</td>
-        <td><a href="{% url 'capacitacion:panel_exportar_inscritos' s.pk %}">Exportar</a></td>
+        <td><a href="{% url 'capacitacion:panel_sesion_asistencia' s.pk %}">Asistencia</a> · <a href="{% url 'capacitacion:panel_exportar_inscritos' s.pk %}">Exportar</a></td>
       </tr>
       {% empty %}
       <tr><td colspan="6" class="p-4 text-muted">Sin sesiones cargadas.</td></tr>

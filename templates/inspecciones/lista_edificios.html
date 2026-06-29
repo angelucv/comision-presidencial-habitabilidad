@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Edificaciones{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+  <h1 class="h4 mb-0">Edificaciones</h1>
+  <a href="{% url 'inspecciones:inicio' %}" class="btn btn-outline-secondary btn-sm">← Inicio</a>
+</div>
+
+<form method="get" class="row g-2 mb-3">
+  <div class="col-md-5">
+    <input type="search" name="q" value="{{ q }}" class="form-control" placeholder="Buscar nombre, código, municipio…">
+  </div>
+  <div class="col-md-4">
+    <select name="estado" class="form-select">
+      <option value="">— Todos los estados —</option>
+      {% for val, label in estados %}
+        <option value="{{ val }}" {% if estado_filtro == val %}selected{% endif %}>{{ label }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="col-md-3">
+    <button type="submit" class="btn btn-primary w-100">Filtrar</button>
+  </div>
+</form>
+
+<div class="list-group shadow-sm">
+  {% for ed in edificaciones %}
+  <a href="{% url 'inspecciones:detalle_edificio' ed.pk %}" class="list-group-item list-group-item-action">
+    <div class="d-flex justify-content-between">
+      <strong>{{ ed.nombre }}</strong>
+      <code>{{ ed.codigo }}</code>
+    </div>
+    <div class="small text-muted">{{ ed.direccion }} · {{ ed.municipio }}, {{ ed.estado }}</div>
+    <div class="small mt-1">
+      {{ ed.get_estado_inspeccion_display }}
+      {% if ed.semaforo %} · <span class="fw-semibold">{{ ed.get_semaforo_display }}</span>{% endif %}
+    </div>
+  </a>
+  {% empty %}
+  <div class="list-group-item text-muted">No hay edificaciones registradas.</div>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "capacitacion/panel/base_panel.html" %}
+
+{% block title %}Edificaciones{% endblock %}
+
+{% block panel_content %}
+<h1 class="h4 mb-3">Edificaciones a inspeccionar</h1>
+
+<div class="row g-4">
+  <div class="col-lg-5">
+    <div class="card shadow-sm border-0">
+      <div class="card-header bg-white fw-semibold">Registrar edificio</div>
+      <div class="card-body">
+        <form method="post" novalidate>
+          {% csrf_token %}
+          {% for field in form %}
+            <div class="mb-3">
+              <label class="form-label" for="{{ field.id_for_label }}">{{ field.label }}</label>
+              {{ field }}
+              {% if field.errors %}<div class="text-danger small">{{ field.errors.0 }}</div>{% endif %}
+            </div>
+          {% endfor %}
+          <button type="submit" class="btn btn-primary">Guardar edificio</button>
+        </form>
+        <p class="small text-muted mt-3 mb-0">Coordenadas opcionales (lat/lon) para ubicar en el mapa de Venezuela.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-7">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h2 class="h6 mb-0">Registrados recientemente</h2>
+      <a href="{% url 'reportes:mapa_edificios' %}" class="btn btn-outline-primary btn-sm">Ver mapa</a>
+    </div>
+    <div class="table-responsive card shadow-sm border-0">
+      <table class="table table-sm mb-0">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Ubicación</th>
+            <th>Estado</th>
+            <th>Semáforo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for ed in edificaciones %}
+          <tr>
+            <td><code>{{ ed.codigo }}</code></td>
+            <td>{{ ed.nombre }}</td>
+            <td class="small">{{ ed.municipio }}, {{ ed.estado }}</td>
+            <td>{{ ed.get_estado_inspeccion_display }}</td>
+            <td>
+              {% if ed.semaforo %}
+                <span class="badge semaforo-badge-{{ ed.semaforo }}">{{ ed.get_semaforo_display }}</span>
+              {% else %}—{% endif %}
+            </td>
+          </tr>
+          {% empty %}
+          <tr><td colspan="5" class="p-4 text-muted">Sin edificios. Ejecute <code>cargar_edificios_demo</code> o registre uno.</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
