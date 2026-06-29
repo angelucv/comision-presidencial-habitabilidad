@@ -74,6 +74,9 @@ if DATABASE_URL:
     from urllib.parse import urlparse
 
     parsed = urlparse(DATABASE_URL)
+    db_options = {}
+    if os.environ.get("RENDER") or (parsed.hostname and "render.com" in parsed.hostname):
+        db_options["sslmode"] = "require"
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql",
@@ -82,6 +85,7 @@ if DATABASE_URL:
             "PASSWORD": parsed.password,
             "HOST": parsed.hostname,
             "PORT": parsed.port or 5432,
+            "OPTIONS": db_options,
         }
     }
 else:
