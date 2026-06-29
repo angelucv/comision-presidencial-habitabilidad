@@ -102,12 +102,17 @@ class Sesion(models.Model):
         return self.cupos_disponibles > 0
 
     def esta_abierta_inscripcion(self) -> bool:
+        """Admite inscripción si la sesión está programada y tiene cupo (pasada o futura)."""
         if self.estado != self.Estado.PROGRAMADA:
             return False
+        return self.tiene_cupo()
+
+    @property
+    def ya_ocurrio(self) -> bool:
         from datetime import datetime
 
-        inicio = timezone.make_aware(datetime.combine(self.fecha, self.hora))
-        return timezone.now() < inicio and self.tiene_cupo()
+        fin = timezone.make_aware(datetime.combine(self.fecha, self.hora))
+        return timezone.now() >= fin
 
     def responsable_efectivo(self) -> str:
         return self.responsable_nombre or self.sede.responsable_efectivo()

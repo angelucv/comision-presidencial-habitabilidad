@@ -7,8 +7,8 @@ OBJETIVOS = [
     "de edificaciones con riesgo estructural.",
     "Evaluar daños en viviendas, vialidad, puentes, elevados y obras públicas con "
     "criterios técnicos unificados.",
-    "Capacitar y organizar brigadas de inspectores para aplicar la metodología ERD/ANIH "
-    "en campo (planilla V.8).",
+    "Capacitar y registrar brigadas de inspectores (inducciones programadas o ya realizadas) "
+    "para aplicar la metodología ERD/ANIH en campo (planilla V.8).",
     "Emitir recomendaciones de acceso mediante semáforo verde, amarillo y rojo, "
     "con trazabilidad para la toma de decisiones de la comisión.",
 ]

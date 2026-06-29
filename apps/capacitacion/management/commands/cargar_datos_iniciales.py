@@ -14,8 +14,6 @@ SEDES_DEMO = [
 ]
 
 HORARIOS = (time(9, 0), time(14, 0))
-DIAS_SESIONES = 10
-
 
 class Command(BaseCommand):
     help = "Crea campaña, sedes de ejemplo y sesiones (idempotente)."
@@ -54,7 +52,7 @@ class Command(BaseCommand):
                 sedes_creadas += 1
                 self.stdout.write(f"Sede creada: {nombre}")
 
-            sesiones_creadas += self._crear_sesiones_proximas(sede)
+            sesiones_creadas += self._crear_sesiones_calendario(sede)
 
         total_sedes = Sede.objects.filter(activa=True).count()
         total_sesiones = Sesion.objects.filter(estado=Sesion.Estado.PROGRAMADA).count()
@@ -65,11 +63,12 @@ class Command(BaseCommand):
             )
         )
 
-    def _crear_sesiones_proximas(self, sede: Sede) -> int:
+    def _crear_sesiones_calendario(self, sede: Sede) -> int:
+        """Sesiones pasadas (retroactivo) y futuras en días hábiles."""
         creadas = 0
-        dia = date.today()
-        dias_agregados = 0
-        while dias_agregados < DIAS_SESIONES:
+        dia = date.today() - timedelta(days=14)
+        fin = date.today() + timedelta(days=21)
+        while dia <= fin:
             if dia.weekday() < 5:
                 for hora in HORARIOS:
                     _, created = Sesion.objects.get_or_create(
@@ -80,6 +79,5 @@ class Command(BaseCommand):
                     )
                     if created:
                         creadas += 1
-                dias_agregados += 1
             dia += timedelta(days=1)
         return creadas

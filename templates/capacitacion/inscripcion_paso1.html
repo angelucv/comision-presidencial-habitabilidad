@@ -8,9 +8,10 @@
   <div class="col-lg-7">
     <h1 class="h4 mb-1">{{ titulo }}</h1>
     {% if qr_mode and sede %}
-      <p class="text-muted">Sede: <strong>{{ sede.nombre }}</strong> — elija la fecha y hora disponibles.</p>
+      <p class="text-muted">Sede: <strong>{{ sede.nombre }}</strong> — elija la sesión (programada o ya realizada).</p>
     {% else %}
-      <p class="text-muted">Paso 1 — Elija el lugar y la sesión de inducción.</p>
+      <p class="text-muted">Paso 1 — Elija la sede y la sesión en la que recibió o recibirá la inducción.</p>
+      <p class="small text-muted mb-0">También puede seleccionar sesiones ya realizadas para registrar participantes capacitados.</p>
     {% endif %}
 
     <div class="card shadow-sm">

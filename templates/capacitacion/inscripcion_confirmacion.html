@@ -23,7 +23,13 @@
       </div>
     </div>
 
-    <p class="small text-muted">Conserve este código. Presente su cédula el día de la inducción.</p>
+    <p class="small text-muted">
+      {% if inscripcion.asistio %}
+        Registro de inducción ya realizada. Conserve este código para sus trámites como inspector.
+      {% else %}
+        Conserve este código. Presente su cédula el día de la inducción.
+      {% endif %}
+    </p>
     <a href="{% url 'core:home' %}" class="btn btn-primary">Volver al inicio</a>
   </div>
 </div>

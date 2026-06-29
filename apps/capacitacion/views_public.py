@@ -71,7 +71,11 @@ def inscripcion_paso2(request, sesion_id):
                 messages.warning(request, "Ya estaba inscrito en esta sesión.")
                 inscripcion = Inscripcion.objects.get(sesion=sesion, participante=participante)
             else:
-                inscripcion = Inscripcion.objects.create(sesion=sesion, participante=participante)
+                inscripcion = Inscripcion.objects.create(
+                    sesion=sesion,
+                    participante=participante,
+                    asistio=sesion.ya_ocurrio,
+                )
         try:
             if enviar_correo_confirmacion(inscripcion, request):
                 messages.info(request, "Se envió un correo de confirmación.")

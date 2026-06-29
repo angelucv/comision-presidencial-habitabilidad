@@ -57,7 +57,7 @@ class ElegirSedeSesionForm(forms.Form):
         cleaned = super().clean()
         sesion = cleaned.get("sesion")
         if sesion and not sesion.esta_abierta_inscripcion():
-            raise ValidationError("La sesión seleccionada no tiene cupo o ya no admite inscripciones.")
+            raise ValidationError("La sesión seleccionada no tiene cupo disponible.")
         return cleaned
 
 
