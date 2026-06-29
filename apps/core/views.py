@@ -4,7 +4,11 @@ from . import comision_data
 
 
 def home(request):
-    return render(request, "core/home.html")
+    return render(
+        request,
+        "core/home.html",
+        {"instituciones_enlaces": comision_data.INSTITUCIONES_ENLACES},
+    )
 
 
 def comision(request):

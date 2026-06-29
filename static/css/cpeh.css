@@ -390,3 +390,92 @@ footer .ve-footer-stars {
   display: block;
   margin-bottom: 0.35rem;
 }
+
+/* Inicio — enlace comisión e instituciones */
+.home-comision-links {
+  font-size: 0.875rem;
+}
+
+.home-comision-info-link {
+  color: var(--ve-azul);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.home-comision-info-link:hover {
+  color: var(--ve-azul-oscuro);
+  text-decoration: underline;
+}
+
+.home-links-sep {
+  color: var(--cpeh-border);
+  margin: 0 0.5rem;
+}
+
+.home-inst-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  margin-top: 0.65rem;
+}
+
+@media (min-width: 576px) {
+  .home-comision-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.5rem;
+  }
+
+  .home-inst-strip {
+    margin-top: 0;
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.home-inst-chip {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.35rem;
+  background: var(--cpeh-surface);
+  border: 1px solid var(--cpeh-border);
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem 0.2rem 0.45rem;
+  font-size: 0.75rem;
+}
+
+.home-inst-abrev {
+  font-weight: 600;
+  color: var(--ve-azul);
+  margin-right: 0.15rem;
+}
+
+.home-inst-link {
+  color: #495057;
+  text-decoration: none;
+}
+
+.home-inst-link:hover {
+  color: var(--ve-azul);
+  text-decoration: underline;
+}
+
+.home-inst-ig {
+  color: #833AB4;
+}
+
+.home-inst-ig:hover {
+  color: #6a2d91;
+}
+
+.comision-enlaces a {
+  color: var(--ve-azul);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.comision-enlaces a:hover {
+  text-decoration: underline;
+}

@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% load crispy_forms_tags %}
 
 {% block title %}Inicio{% endblock %}
 
@@ -21,11 +20,32 @@
           Registro de inducciones para inspectores y, en fases posteriores, captura digital de inspecciones
           con semáforo verde / amarillo / rojo según metodología ANIH.
         </p>
+
         <div class="d-grid d-sm-flex flex-wrap gap-2 mt-3 mt-md-4">
           <a class="btn btn-primary btn-lg" href="{% url 'capacitacion_public:paso1' %}">Inscribirse a inducción</a>
-          <a class="btn btn-outline-ve btn-lg" href="{% url 'core:comision' %}">La Comisión</a>
           <a class="btn btn-outline-ve btn-lg" href="{% url 'cuentas:login' %}">Iniciar sesión</a>
         </div>
+
+        <div class="home-comision-links mt-3 pt-3 border-top">
+          <a href="{% url 'core:comision' %}" class="home-comision-info-link">
+            Información sobre la comisión
+          </a>
+          <span class="home-links-sep d-none d-sm-inline" aria-hidden="true">·</span>
+          <div class="home-inst-strip">
+            {% for inst in instituciones_enlaces %}
+              <span class="home-inst-chip" title="{{ inst.nombre }}">
+                <span class="home-inst-abrev">{{ inst.abrev }}</span>
+                {% if inst.web %}
+                  <a href="{{ inst.web }}" target="_blank" rel="noopener noreferrer" class="home-inst-link">Web</a>
+                {% endif %}
+                {% if inst.instagram %}
+                  <a href="{{ inst.instagram }}" target="_blank" rel="noopener noreferrer" class="home-inst-link home-inst-ig">Instagram</a>
+                {% endif %}
+              </span>
+            {% endfor %}
+          </div>
+        </div>
+
         <p class="small text-muted mt-4 mb-0">
           Los datos personales se usan únicamente para la gestión de capacitación e inspecciones
           en el marco de la comisión presidencial.

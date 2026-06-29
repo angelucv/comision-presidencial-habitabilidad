@@ -50,6 +50,7 @@
                 <th>Institución / actor</th>
                 <th class="d-none d-md-table-cell">Rol</th>
                 <th>Detalle</th>
+                <th class="d-none d-lg-table-cell">Enlaces</th>
               </tr>
             </thead>
             <tbody>
@@ -59,6 +60,23 @@
                 <td class="d-none d-md-table-cell text-muted">{{ m.rol }}</td>
                 <td class="small">
                   <span class="d-md-none text-muted">{{ m.rol }} — </span>{{ m.detalle }}
+                  {% if m.web or m.instagram %}
+                    <span class="d-lg-none comision-enlaces mt-1 d-block">
+                      {% if m.web %}<a href="{{ m.web }}" target="_blank" rel="noopener noreferrer">Web</a>{% endif %}
+                      {% if m.web and m.instagram %} · {% endif %}
+                      {% if m.instagram %}<a href="{{ m.instagram }}" target="_blank" rel="noopener noreferrer">Instagram</a>{% endif %}
+                    </span>
+                  {% endif %}
+                </td>
+                <td class="d-none d-lg-table-cell small comision-enlaces">
+                  {% if m.web %}
+                    <a href="{{ m.web }}" target="_blank" rel="noopener noreferrer">Sitio web</a>
+                  {% endif %}
+                  {% if m.web and m.instagram %}<br>{% endif %}
+                  {% if m.instagram %}
+                    <a href="{{ m.instagram }}" target="_blank" rel="noopener noreferrer">Instagram</a>
+                  {% endif %}
+                  {% if not m.web and not m.instagram %}<span class="text-muted">—</span>{% endif %}
                 </td>
               </tr>
               {% endfor %}
