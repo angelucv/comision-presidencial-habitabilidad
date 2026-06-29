@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+
+{% block title %}La Comisión{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-10">
+
+    <div class="comision-hero card shadow-sm border-0 mb-4">
+      <div class="ve-hero-band" aria-hidden="true">
+        <span style="background:#FFCC00"></span>
+        <span style="background:#00247D"></span>
+        <span style="background:#CF142B"></span>
+      </div>
+      <div class="card-body p-3 p-md-4">
+        <p class="hero-eyebrow text-uppercase text-muted small mb-2">Información institucional</p>
+        <h1 class="hero-title mb-2">{{ CPEH_NOMBRE_COMISION }}</h1>
+        <p class="text-muted mb-0">
+          Comisión creada el <strong>28 de junio de 2026</strong> tras el doble terremoto del
+          <strong>{{ CPEH_EVENTO_SISMO_FECHA }}</strong>, para evaluar la habitabilidad de viviendas
+          e infraestructuras en Venezuela.
+        </p>
+      </div>
+    </div>
+
+    <!-- Objetivos -->
+    <section class="card shadow-sm border-0 mb-4 comision-section">
+      <div class="card-header comision-section-header">
+        <h2 class="h5 mb-0">Objetivos de la comisión</h2>
+      </div>
+      <div class="card-body">
+        <ul class="comision-list mb-0">
+          {% for obj in objetivos %}
+            <li>{{ obj }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+
+    <!-- Miembros e instituciones -->
+    <section class="card shadow-sm border-0 mb-4 comision-section">
+      <div class="card-header comision-section-header">
+        <h2 class="h5 mb-0">Miembros e instituciones participantes</h2>
+      </div>
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table table-hover comision-table mb-0">
+            <thead>
+              <tr>
+                <th>Institución / actor</th>
+                <th class="d-none d-md-table-cell">Rol</th>
+                <th>Detalle</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for m in miembros %}
+              <tr>
+                <td class="fw-semibold">{{ m.institucion }}</td>
+                <td class="d-none d-md-table-cell text-muted">{{ m.rol }}</td>
+                <td class="small">
+                  <span class="d-md-none text-muted">{{ m.rol }} — </span>{{ m.detalle }}
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <div class="row g-4 mb-4">
+      <!-- Evento sísmico -->
+      <div class="col-md-6">
+        <section class="card shadow-sm border-0 h-100 comision-section">
+          <div class="card-header comision-section-header">
+            <h2 class="h5 mb-0">Hecho generador</h2>
+          </div>
+          <div class="card-body">
+            <p class="small text-muted">Doblete sísmico del {{ CPEH_EVENTO_SISMO_FECHA }} (~39 segundos entre eventos):</p>
+            <div class="table-responsive">
+              <table class="table table-sm mb-0">
+                <thead>
+                  <tr>
+                    <th>Evento</th>
+                    <th>Mw</th>
+                    <th>Hora</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for nombre, mw, hora, epicentro in evento_sismo %}
+                  <tr>
+                    <td>{{ nombre }}</td>
+                    <td><strong>{{ mw }}</strong></td>
+                    <td>{{ hora }}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+            <p class="small text-muted mt-2 mb-0">
+              Afectación reportada en Caracas, La Guaira, Miranda, Aragua, Yaracuy y otros estados.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <!-- Semáforo -->
+      <div class="col-md-6">
+        <section class="card shadow-sm border-0 h-100 comision-section">
+          <div class="card-header comision-section-header">
+            <h2 class="h5 mb-0">Sistema de semáforo</h2>
+          </div>
+          <div class="card-body">
+            <p class="small text-muted">Metodología ERD / ANIH — etiquetas de acceso a edificaciones:</p>
+            <ul class="list-unstyled mb-0">
+              {% for color, titulo, desc in semaforo %}
+              <li class="comision-semaforo-item mb-3">
+                <span class="semaforo-dot semaforo-{{ color }}"></span>
+                <strong>{{ titulo }}</strong>
+                <span class="d-block small text-muted ms-4 ps-2">{{ desc }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Relación con el sistema -->
+    <section class="card shadow-sm border-0 mb-4 comision-section">
+      <div class="card-header comision-section-header">
+        <h2 class="h5 mb-0">Este sistema informático (CPEH)</h2>
+      </div>
+      <div class="card-body">
+        <p class="mb-3">
+          La plataforma apoya la operación de la comisión mediante:
+        </p>
+        <div class="row g-3">
+          <div class="col-sm-6 col-lg-3">
+            <div class="comision-pillar">
+              <strong>Capacitación</strong>
+              <p class="small text-muted mb-0">Inscripción e inducción masiva de inspectores en sedes universitarias.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="comision-pillar">
+              <strong>Inspección ERD</strong>
+              <p class="small text-muted mb-0">Planilla digital V.8 y reglas de evaluación rápida de daños.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="comision-pillar">
+              <strong>Semáforo</strong>
+              <p class="small text-muted mb-0">Etiquetas verde, amarilla y roja para decisiones de habitabilidad.</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="comision-pillar">
+              <strong>Reportes</strong>
+              <p class="small text-muted mb-0">Trazabilidad y exportación para coordinación institucional.</p>
+            </div>
+          </div>
+        </div>
+        <div class="d-grid d-sm-flex gap-2 mt-4">
+          <a class="btn btn-primary" href="{% url 'capacitacion_public:paso1' %}">Inscribirse a inducción</a>
+          <a class="btn btn-outline-ve" href="{% url 'core:home' %}">Volver al inicio</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+{% endblock %}

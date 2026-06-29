@@ -33,6 +33,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navMain">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="{% url 'core:comision' %}">La Comisión</a></li>
           <li class="nav-item"><a class="nav-link" href="{% url 'capacitacion_public:paso1' %}">Inscribirse</a></li>
           {% if user.is_staff %}
           <li class="nav-item"><a class="nav-link" href="{% url 'capacitacion:panel_inicio' %}">Panel</a></li>
@@ -65,7 +66,10 @@
     <div class="container small text-muted text-center">
       <p class="ve-footer-stars mb-2" aria-hidden="true">★ ★ ★ ★ ★ ★ ★ ★</p>
       <p class="mb-1">{{ CPEH_NOMBRE_COMISION }}</p>
-      <p class="mb-1">Terremoto {{ CPEH_EVENTO_SISMO_FECHA }} · Metodología ERD / ANIH</p>
+      <p class="mb-1">
+        <a href="{% url 'core:comision' %}" class="text-muted">Información de la comisión</a>
+        · Terremoto {{ CPEH_EVENTO_SISMO_FECHA }} · Metodología ERD / ANIH
+      </p>
       <p class="mb-0 semaforo-legend">
         <span class="semaforo-verde"></span> Habitable
         <span class="semaforo-amarillo ms-2"></span> Acceso restringido

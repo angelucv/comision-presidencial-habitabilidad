@@ -322,3 +322,71 @@ footer .ve-footer-stars {
 .panel-sidebar .list-group-item.bg-primary {
   background: var(--ve-azul) !important;
 }
+
+/* Página La Comisión */
+.comision-hero {
+  overflow: hidden;
+}
+
+.comision-section-header {
+  background: var(--ve-azul);
+  color: #fff;
+  border-bottom: 2px solid var(--ve-amarillo);
+  font-weight: 600;
+}
+
+.comision-list {
+  padding-left: 1.25rem;
+}
+
+.comision-list li {
+  margin-bottom: 0.65rem;
+  line-height: 1.5;
+}
+
+.comision-list li:last-child {
+  margin-bottom: 0;
+}
+
+.comision-table th {
+  background: var(--cpeh-surface);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.comision-table td {
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+
+.comision-semaforo-item {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.semaforo-dot {
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.semaforo-dot.semaforo-verde { background: var(--cpeh-success); }
+.semaforo-dot.semaforo-amarillo { background: var(--cpeh-warning); }
+.semaforo-dot.semaforo-rojo { background: var(--cpeh-danger); }
+
+.comision-pillar {
+  background: var(--cpeh-surface);
+  border-left: 3px solid var(--ve-azul);
+  padding: 0.85rem 1rem;
+  border-radius: 0 0.35rem 0.35rem 0;
+  height: 100%;
+}
+
+.comision-pillar strong {
+  color: var(--ve-azul);
+  display: block;
+  margin-bottom: 0.35rem;
+}
