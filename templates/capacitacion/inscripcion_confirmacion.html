@@ -13,7 +13,8 @@
       <div class="card-body">
         <p class="mb-2"><strong>Código:</strong> {{ inscripcion.codigo }}</p>
         <p class="mb-2"><strong>Participante:</strong> {{ inscripcion.participante.nombre_completo }}</p>
-        <p class="mb-2"><strong>C.I.:</strong> {{ inscripcion.participante.cedula }}</p>
+        <p class="mb-2"><strong>C.I.:</strong> {{ inscripcion.participante.cedula_display }}</p>
+        <p class="mb-2"><strong>Teléfono:</strong> {{ inscripcion.participante.telefono_display }}</p>
         <p class="mb-2"><strong>Sede:</strong> {{ inscripcion.sesion.sede.nombre }}</p>
         <p class="mb-2"><strong>Fecha y hora:</strong> {{ inscripcion.sesion.fecha|date:"d/m/Y" }} · {{ inscripcion.sesion.hora|time:"H:i" }}</p>
         {% if inscripcion.sesion.responsable_efectivo %}

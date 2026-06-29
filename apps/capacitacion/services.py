@@ -248,10 +248,10 @@ def exportar_inscritos_sesion(sesion: Sesion) -> bytes:
         p = ins.participante
         ws.append([
             ins.codigo,
-            p.cedula,
+            p.cedula_display,
             p.apellidos,
             p.nombres,
-            p.telefono,
+            p.telefono_display,
             p.correo,
             p.profesion_display(),
             p.procedencia,

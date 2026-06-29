@@ -15,7 +15,7 @@
       <tr><td style="padding:6px 0; color:#666;">Fecha</td><td>{{ sesion.fecha|date:"d/m/Y" }}</td></tr>
       <tr><td style="padding:6px 0; color:#666;">Hora</td><td>{{ sesion.hora|time:"H:i" }}</td></tr>
     </table>
-    <p style="font-size: 14px; color: #666;">Presente su cédula <strong>{{ participante.cedula }}</strong> el día de la inducción.</p>
+    <p style="font-size: 14px; color: #666;">Presente su cédula <strong>{{ participante.cedula_display }}</strong> el día de la inducción.</p>
   </div>
   <p style="font-size: 12px; color: #999; padding: 0 20px;">{{ comision }}</p>
 </body>

@@ -57,10 +57,12 @@ class TestInscripcionPublica:
         r = client.post(
             url_paso2,
             {
-                "cedula": "V12345678",
+                "cedula_tipo": "V",
+                "cedula_numero": "12.345.678",
                 "apellidos": "Pérez",
                 "nombres": "Juan",
-                "telefono": "04141234567",
+                "telefono_operadora": "0414",
+                "telefono_linea": "123-4567",
                 "correo": "juan@example.com",
                 "profesion": Participante.Profesion.INGENIERO_CIVIL,
                 "profesion_otro": "",

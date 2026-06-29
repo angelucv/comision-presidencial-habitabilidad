@@ -1,15 +1,12 @@
-import re
-
 from django.core.exceptions import ValidationError
 from django.db import models
 
-
-def validar_cedula_venezolana(valor: str) -> str:
-    """Formato V/E + dígitos (ej. V12345678)."""
-    valor = (valor or "").strip().upper().replace(" ", "")
-    if not re.match(r"^[VE]\d{6,9}$", valor):
-        raise ValidationError("Use formato V o E seguido de 6 a 9 dígitos (ej. V12345678).")
-    return valor
+from .venezuela import (
+    formato_cedula_mostrar,
+    formato_telefono_mostrar,
+    validar_cedula_venezolana,
+    validar_telefono_movil_ve,
+)
 
 
 class Participante(models.Model):
@@ -25,7 +22,7 @@ class Participante(models.Model):
     cedula = models.CharField("C.I.", max_length=12, unique=True, validators=[validar_cedula_venezolana])
     apellidos = models.CharField(max_length=120)
     nombres = models.CharField(max_length=120)
-    telefono = models.CharField("Teléfono celular", max_length=20)
+    telefono = models.CharField("Teléfono celular", max_length=20, validators=[validar_telefono_movil_ve])
     correo = models.EmailField(
         "Correo electrónico",
         blank=True,
@@ -59,11 +56,19 @@ class Participante(models.Model):
         verbose_name_plural = "participantes"
 
     def __str__(self) -> str:
-        return f"{self.cedula} — {self.nombre_completo}"
+        return f"{self.cedula_display} — {self.nombre_completo}"
 
     @property
     def nombre_completo(self) -> str:
         return f"{self.apellidos} {self.nombres}".strip()
+
+    @property
+    def cedula_display(self) -> str:
+        return formato_cedula_mostrar(self.cedula)
+
+    @property
+    def telefono_display(self) -> str:
+        return formato_telefono_mostrar(self.telefono)
 
     def clean(self):
         super().clean()
