@@ -1,4 +1,4 @@
-"""Carga datos iniciales de demostración (campaña, sedes de ejemplo)."""
+"""Carga datos iniciales de demostración (campaña, sedes y sesiones)."""
 from datetime import date, time, timedelta
 
 from django.core.management.base import BaseCommand
@@ -6,8 +6,19 @@ from django.core.management.base import BaseCommand
 from apps.capacitacion.models import Campana, Sede, Sesion
 
 
+SEDES_DEMO = [
+    ("Universidad Central de Venezuela (UCV)", "ucv", "Los Chaguaramos", "Caracas", "Distrito Capital"),
+    ("Universidad Católica Andrés Bello (UCAB)", "ucab", "Montalbán", "Caracas", "Distrito Capital"),
+    ("Universidad de Carabobo (UC)", "uc", "Ciudad Universitaria", "Valencia", "Carabobo"),
+    ("Auditorio CIV — Caracas", "civ-caracas", "La Candelaria", "Caracas", "Distrito Capital"),
+]
+
+HORARIOS = (time(9, 0), time(14, 0))
+DIAS_SESIONES = 10
+
+
 class Command(BaseCommand):
-    help = "Crea campaña y sedes de ejemplo para pruebas locales."
+    help = "Crea campaña, sedes de ejemplo y sesiones (idempotente)."
 
     def handle(self, *args, **options):
         campana, _ = Campana.objects.get_or_create(
@@ -20,16 +31,14 @@ class Command(BaseCommand):
                 "responsable_nombre": "Ing. Francisco Garcés",
             },
         )
+        if not campana.activa:
+            campana.activa = True
+            campana.save(update_fields=["activa"])
 
-        sedes_data = [
-            ("Universidad Central de Venezuela (UCV)", "ucv", "Los Chaguaramos", "Caracas", "Distrito Capital"),
-            ("Universidad Católica Andrés Bello (UCAB)", "ucab", "Montalbán", "Caracas", "Distrito Capital"),
-            ("Universidad de Carabobo (UC)", "uc", "Ciudad Universitaria", "Valencia", "Carabobo"),
-            ("Auditorio CIV — Caracas", "civ-caracas", "La Candelaria", "Caracas", "Distrito Capital"),
-        ]
+        sedes_creadas = sesiones_creadas = 0
 
-        for nombre, slug, direccion, municipio, estado in sedes_data:
-            sede, created = Sede.objects.get_or_create(
+        for nombre, slug, direccion, municipio, estado in SEDES_DEMO:
+            sede, created = Sede.objects.update_or_create(
                 slug=slug,
                 defaults={
                     "campana": campana,
@@ -38,22 +47,39 @@ class Command(BaseCommand):
                     "municipio": municipio,
                     "estado": estado,
                     "activa": True,
+                    "responsable_nombre": campana.responsable_nombre,
                 },
             )
             if created:
+                sedes_creadas += 1
                 self.stdout.write(f"Sede creada: {nombre}")
-                # Próximos 5 días hábiles a las 09:00
-                dia = date.today() + timedelta(days=1)
-                count = 0
-                while count < 5:
-                    if dia.weekday() < 5:
-                        Sesion.objects.get_or_create(
-                            sede=sede,
-                            fecha=dia,
-                            hora=time(9, 0),
-                            defaults={"cupo": 100},
-                        )
-                        count += 1
-                    dia += timedelta(days=1)
 
-        self.stdout.write(self.style.SUCCESS("Datos iniciales listos."))
+            sesiones_creadas += self._crear_sesiones_proximas(sede)
+
+        total_sedes = Sede.objects.filter(activa=True).count()
+        total_sesiones = Sesion.objects.filter(estado=Sesion.Estado.PROGRAMADA).count()
+        self.stdout.write(
+            self.style.SUCCESS(
+                f"Listo: {sedes_creadas} sedes nuevas, {sesiones_creadas} sesiones nuevas. "
+                f"Total activas: {total_sedes} sedes, {total_sesiones} sesiones programadas."
+            )
+        )
+
+    def _crear_sesiones_proximas(self, sede: Sede) -> int:
+        creadas = 0
+        dia = date.today()
+        dias_agregados = 0
+        while dias_agregados < DIAS_SESIONES:
+            if dia.weekday() < 5:
+                for hora in HORARIOS:
+                    _, created = Sesion.objects.get_or_create(
+                        sede=sede,
+                        fecha=dia,
+                        hora=hora,
+                        defaults={"cupo": 100, "estado": Sesion.Estado.PROGRAMADA},
+                    )
+                    if created:
+                        creadas += 1
+                dias_agregados += 1
+            dia += timedelta(days=1)
+        return creadas
