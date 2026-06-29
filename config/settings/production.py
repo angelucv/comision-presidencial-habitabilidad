@@ -30,5 +30,8 @@ CSRF_TRUSTED_ORIGINS = [
 if _render_host:
     CSRF_TRUSTED_ORIGINS.append(f"https://{_render_host}")
 
-if EMAIL_HOST:  # noqa: F405
+# Render plan gratis bloquea SMTP (587/465). Brevo usa HTTPS (443).
+if BREVO_API_KEY:  # noqa: F405
+    EMAIL_BACKEND = "apps.core.email_backends.BrevoEmailBackend"
+elif EMAIL_HOST:  # noqa: F405
     EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
