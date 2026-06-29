@@ -13,43 +13,37 @@ OBJETIVOS = [
     "con trazabilidad para la toma de decisiones de la comisión.",
 ]
 
-# Enlaces compactos para la página de inicio (abreviatura + web / Instagram)
+# Enlaces para la página de inicio (nombre visible + web / Instagram verificados)
 INSTITUCIONES_ENLACES = [
     {
-        "abrev": "Coordinación",
-        "nombre": "Ing. Francisco Garcés",
+        "nombre": "Ing. Francisco Garcés — Coordinación técnica",
         "web": None,
         "instagram": "https://www.instagram.com/garcesfrancisco",
     },
     {
-        "abrev": "CIV",
-        "nombre": "Colegio de Ingenieros de Venezuela",
-        "web": "https://www.civ.org.ve",
-        "instagram": "https://www.instagram.com/civvenezuela",
+        "nombre": "Colegio de Ingenieros de Venezuela (CIV)",
+        "web": "https://civ.net.ve",
+        "instagram": "https://www.instagram.com/civoficial",
     },
     {
-        "abrev": "Funvisis",
-        "nombre": "Fundación Venezolana de Investigaciones Sismológicas",
-        "web": "https://www.funvisis.gob.ve",
+        "nombre": "Fundación Venezolana de Investigaciones Sismológicas (Funvisis)",
+        "web": "http://www.funvisis.gob.ve",
         "instagram": "https://www.instagram.com/funvisis",
     },
     {
-        "abrev": "Hábitat",
-        "nombre": "Ministerio de Hábitat y Vivienda",
-        "web": "https://www.minvivienda.gob.ve",
-        "instagram": None,
+        "nombre": "Ministerio del Poder Popular para el Hábitat y la Vivienda (MINHVI)",
+        "web": "https://www.minhvi.gob.ve",
+        "instagram": "https://www.instagram.com/minvivienda_ve",
     },
     {
-        "abrev": "MOP",
-        "nombre": "Ministerio de Obras Públicas",
-        "web": "https://www.mop.gob.ve",
-        "instagram": None,
+        "nombre": "Ministerio del Poder Popular de Obras Públicas (MPPOP)",
+        "web": None,
+        "instagram": "https://www.instagram.com/minobraspublicas_ve",
     },
     {
-        "abrev": "CVC",
-        "nombre": "Cámara Venezolana de la Construcción",
-        "web": "https://www.cvc.org.ve",
-        "instagram": "https://www.instagram.com/cvcvenezuela",
+        "nombre": "Cámara Venezolana de la Construcción (CVC)",
+        "web": "https://www.cvc.com.ve",
+        "instagram": "https://www.instagram.com/cvconstruccion",
     },
 ]
 
@@ -69,25 +63,25 @@ MIEMBROS = [
         "instagram": "https://www.instagram.com/garcesfrancisco",
     },
     {
-        "institucion": "Ministerio de Hábitat y Vivienda",
+        "institucion": "Ministerio del Poder Popular para el Hábitat y la Vivienda (MINHVI)",
         "rol": "Integrante de la comisión",
         "detalle": "Política habitacional y vivienda afectada.",
-        "web": "https://www.minvivienda.gob.ve",
-        "instagram": None,
+        "web": "https://www.minhvi.gob.ve",
+        "instagram": "https://www.instagram.com/minvivienda_ve",
     },
     {
-        "institucion": "Ministerio de Obras Públicas",
+        "institucion": "Ministerio del Poder Popular de Obras Públicas (MPPOP)",
         "rol": "Integrante de la comisión",
         "detalle": "Infraestructura vial, puentes y obras públicas.",
-        "web": "https://www.mop.gob.ve",
-        "instagram": None,
+        "web": None,
+        "instagram": "https://www.instagram.com/minobraspublicas_ve",
     },
     {
         "institucion": "Colegio de Ingenieros de Venezuela (CIV)",
         "rol": "Brigadas técnicas y capacitación",
         "detalle": "Inspectores, inducciones masivas y evaluación de daños en edificaciones.",
-        "web": "https://www.civ.org.ve",
-        "instagram": "https://www.instagram.com/civvenezuela",
+        "web": "https://civ.net.ve",
+        "instagram": "https://www.instagram.com/civoficial",
     },
     {
         "institucion": "Cuerpo de Ingenieros de la FANB",
@@ -97,18 +91,18 @@ MIEMBROS = [
         "instagram": None,
     },
     {
-        "institucion": "Funvisis",
+        "institucion": "Fundación Venezolana de Investigaciones Sismológicas (Funvisis)",
         "rol": "Contexto sísmico",
         "detalle": "Información del evento del 24-jun-2026 (Mw 7,2 y 7,5).",
-        "web": "https://www.funvisis.gob.ve",
+        "web": "http://www.funvisis.gob.ve",
         "instagram": "https://www.instagram.com/funvisis",
     },
     {
-        "institucion": "Cámara Venezolana de la Construcción",
+        "institucion": "Cámara Venezolana de la Construcción (CVC)",
         "rol": "Criterios técnicos",
         "detalle": "Estándares y buenas prácticas de la construcción.",
-        "web": "https://www.cvc.org.ve",
-        "instagram": "https://www.instagram.com/cvcvenezuela",
+        "web": "https://www.cvc.com.ve",
+        "instagram": "https://www.instagram.com/cvconstruccion",
     },
     {
         "institucion": "Universidades e instituciones académicas",

@@ -30,20 +30,20 @@
           <a href="{% url 'core:comision' %}" class="home-comision-info-link">
             Información sobre la comisión
           </a>
-          <span class="home-links-sep d-none d-sm-inline" aria-hidden="true">·</span>
-          <div class="home-inst-strip">
+          <ul class="home-inst-list list-unstyled mb-0 mt-2">
             {% for inst in instituciones_enlaces %}
-              <span class="home-inst-chip" title="{{ inst.nombre }}">
-                <span class="home-inst-abrev">{{ inst.abrev }}</span>
+              <li class="home-inst-item">
                 {% if inst.web %}
-                  <a href="{{ inst.web }}" target="_blank" rel="noopener noreferrer" class="home-inst-link">Web</a>
+                  <a href="{{ inst.web }}" target="_blank" rel="noopener noreferrer" class="home-inst-nombre">{{ inst.nombre }}</a>
+                {% else %}
+                  <span class="home-inst-nombre">{{ inst.nombre }}</span>
                 {% endif %}
                 {% if inst.instagram %}
                   <a href="{{ inst.instagram }}" target="_blank" rel="noopener noreferrer" class="home-inst-link home-inst-ig">Instagram</a>
                 {% endif %}
-              </span>
+              </li>
             {% endfor %}
-          </div>
+          </ul>
         </div>
 
         <p class="small text-muted mt-4 mb-0">

@@ -407,54 +407,39 @@ footer .ve-footer-stars {
   text-decoration: underline;
 }
 
-.home-links-sep {
-  color: var(--cpeh-border);
-  margin: 0 0.5rem;
+.home-inst-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
-.home-inst-strip {
+.home-inst-item {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 0.75rem;
-  margin-top: 0.65rem;
+  align-items: baseline;
+  gap: 0.35rem 0.65rem;
+  line-height: 1.4;
 }
 
-@media (min-width: 576px) {
-  .home-comision-links {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 0.35rem 0.5rem;
-  }
-
-  .home-inst-strip {
-    margin-top: 0;
-    flex: 1;
-    min-width: 0;
-  }
-}
-
-.home-inst-chip {
-  display: inline-flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.25rem 0.35rem;
-  background: var(--cpeh-surface);
-  border: 1px solid var(--cpeh-border);
-  border-radius: 999px;
-  padding: 0.2rem 0.55rem 0.2rem 0.45rem;
-  font-size: 0.75rem;
-}
-
-.home-inst-abrev {
+.home-inst-nombre {
   font-weight: 600;
   color: var(--ve-azul);
-  margin-right: 0.15rem;
+  text-decoration: none;
+}
+
+a.home-inst-nombre:hover {
+  color: var(--ve-azul-oscuro);
+  text-decoration: underline;
+}
+
+span.home-inst-nombre {
+  color: var(--cpeh-text);
 }
 
 .home-inst-link {
   color: #495057;
   text-decoration: none;
+  font-size: 0.8125rem;
 }
 
 .home-inst-link:hover {
