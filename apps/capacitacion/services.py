@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import io
+import logging
 from datetime import date, datetime, time
 from typing import Any
 
@@ -11,6 +12,8 @@ from django.template.loader import render_to_string
 from openpyxl import Workbook, load_workbook
 
 from apps.capacitacion.models import Campana, Inscripcion, Sede, Sesion
+
+logger = logging.getLogger(__name__)
 
 
 def site_base_url(request=None) -> str:
@@ -52,15 +55,24 @@ def enviar_correo_confirmacion(inscripcion: Inscripcion, request=None) -> bool:
     body = render_to_string("capacitacion/email/confirmacion_inscripcion.txt", context)
     html_body = render_to_string("capacitacion/email/confirmacion_inscripcion.html", context)
 
-    send_mail(
-        subject=subject,
-        message=body,
-        from_email=settings.DEFAULT_FROM_EMAIL,
-        recipient_list=[participante.correo],
-        html_message=html_body,
-        fail_silently=False,
-    )
-    return True
+    try:
+        sent = send_mail(
+            subject=subject,
+            message=body,
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            recipient_list=[participante.correo],
+            html_message=html_body,
+            fail_silently=False,
+        )
+    except Exception:
+        logger.exception(
+            "No se pudo enviar correo de confirmación a %s (inscripción %s)",
+            participante.correo,
+            inscripcion.codigo,
+        )
+        return False
+
+    return bool(sent)
 
 
 def _parse_fecha(valor: Any) -> date:

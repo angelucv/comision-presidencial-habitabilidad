@@ -53,36 +53,47 @@ def inscripcion_paso2(request, sesion_id):
 
     form = DatosParticipanteForm(request.POST or None)
     if request.method == "POST" and form.is_valid():
-        with transaction.atomic():
-            cedula = form.cleaned_data["cedula"]
-            participante, _ = Participante.objects.update_or_create(
-                cedula=cedula,
-                defaults={
-                    "apellidos": form.cleaned_data["apellidos"],
-                    "nombres": form.cleaned_data["nombres"],
-                    "telefono": form.cleaned_data["telefono"],
-                    "correo": form.cleaned_data.get("correo", ""),
-                    "profesion": form.cleaned_data["profesion"],
-                    "profesion_otro": form.cleaned_data.get("profesion_otro", ""),
-                    "procedencia": form.cleaned_data["procedencia"],
-                },
-            )
-            if Inscripcion.objects.filter(sesion=sesion, participante=participante).exists():
-                messages.warning(request, "Ya estaba inscrito en esta sesión.")
-                inscripcion = Inscripcion.objects.get(sesion=sesion, participante=participante)
-            else:
-                inscripcion = Inscripcion.objects.create(
-                    sesion=sesion,
-                    participante=participante,
-                    asistio=sesion.ya_ocurrio,
-                )
         try:
-            if enviar_correo_confirmacion(inscripcion, request):
-                messages.info(request, "Se envió un correo de confirmación.")
+            with transaction.atomic():
+                cedula = form.cleaned_data["cedula"]
+                participante, _ = Participante.objects.update_or_create(
+                    cedula=cedula,
+                    defaults={
+                        "apellidos": form.cleaned_data["apellidos"],
+                        "nombres": form.cleaned_data["nombres"],
+                        "telefono": form.cleaned_data["telefono"],
+                        "correo": form.cleaned_data.get("correo", ""),
+                        "profesion": form.cleaned_data["profesion"],
+                        "profesion_otro": form.cleaned_data.get("profesion_otro", ""),
+                        "procedencia": form.cleaned_data["procedencia"],
+                    },
+                )
+                if Inscripcion.objects.filter(sesion=sesion, participante=participante).exists():
+                    messages.warning(request, "Ya estaba inscrito en esta sesión.")
+                    inscripcion = Inscripcion.objects.get(sesion=sesion, participante=participante)
+                else:
+                    inscripcion = Inscripcion.objects.create(
+                        sesion=sesion,
+                        participante=participante,
+                        asistio=sesion.ya_ocurrio,
+                    )
         except Exception:
+            messages.error(
+                request,
+                "No se pudo completar la inscripción. Verifique los datos e intente de nuevo.",
+            )
+            return render(
+                request,
+                "capacitacion/inscripcion_paso2.html",
+                {"form": form, "sesion": sesion},
+            )
+
+        if enviar_correo_confirmacion(inscripcion, request):
+            messages.info(request, "Se envió un correo de confirmación.")
+        elif participante.correo:
             messages.warning(
                 request,
-                "Inscripción guardada, pero no se pudo enviar el correo. Verifique la configuración SMTP.",
+                "Inscripción guardada, pero no se pudo enviar el correo. Revise la configuración SMTP.",
             )
         return redirect("capacitacion_public:confirmacion", codigo=inscripcion.codigo)
 
