@@ -1,0 +1,35 @@
+{% extends "capacitacion/panel/base_panel.html" %}
+
+{% block title %}Sesiones{% endblock %}
+
+{% block panel_content %}
+<h1 class="h4 mb-3">Sesiones de inducción</h1>
+<div class="table-responsive card shadow-sm border-0">
+  <table class="table table-sm mb-0">
+    <thead>
+      <tr>
+        <th>Sede</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Inscritos</th>
+        <th>Estado</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for s in sesiones %}
+      <tr>
+        <td>{{ s.sede.nombre }}</td>
+        <td>{{ s.fecha|date:"d/m/Y" }}</td>
+        <td>{{ s.hora|time:"H:i" }}</td>
+        <td>{{ s.num_inscritos }} / {{ s.cupo }}</td>
+        <td>{{ s.get_estado_display }}</td>
+        <td><a href="{% url 'capacitacion:panel_exportar_inscritos' s.pk %}">Exportar</a></td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="6" class="p-4 text-muted">Sin sesiones cargadas.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

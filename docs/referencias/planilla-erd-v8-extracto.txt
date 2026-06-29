@@ -1,0 +1,893 @@
+================================================================================
+FILE: C:\Users\Angel\Downloads\Instrumento de Inspección - Planilla y Manual de Campo- V.8.docx
+================================================================================
+EVALUACIÓN RÁPIDA DE DAÑOS EN EDIFICACIONES
+Planilla Nº
+Tipo de evento y fecha
+Fecha de la Inspección
+Hora
+Inicio
+Fin
+1. INFORMACIÓN GENERAL
+Inspectores
+Localización
+Nombre y Apellido
+Cédula de Identidad
+Estado
+Ciudad
+Municipio
+Sector/Calle
+Coordenadas
+Latitud
+Longitud
+Datos Generales de la Edificación
+Uso predominante de la Edificación
+Nombre/Nº
+Vivienda
+Comercio/Oficina
+Gubernamental
+Nº de Personas
+Nº de Pisos
+Educativo
+Médico /Asistencial
+Seguridad
+Nº Semisótanos
+Nº Sótanos
+Industrial
+Cultural/Recreativo
+Religioso
+Año de construcción
+Otros (Especifique):
+Material predominante de la Estructura
+Concreto
+Acero
+Mampostería formal
+Mampostería informal
+Otro :
+2. INSPECCIÓN EXTERNA (calificar sin ingresar a la edificación)
+Aspectos revisados
+a. Bajo
+b. Medio
+c. Alto
+Colapso de la estructura
+No
+No
+Posible, Parcial o Total
+Peligro por edificios aledaños
+No
+Moderado
+Elevado
+Peligro geológico o geotécnico
+No
+Moderado
+Elevado
+Asentamiento del edificio
+No
+Hasta 20 cm
+˃ 20 cm
+Inclinación del edificio
+No
+Hasta 2cm/60cm
+Mayor que 2cm/60cm
+Riesgo Externo
+A. Bajo (Todos a)
+B. Medio (b≥1 y c=0)
+C. Alto (c≥1)
+Si el Riesgo Externo es catalogado como C. Alto, no continúe con la inspección interna, vaya al punto 6 y coloque Etiqueta roja.
+3. IDENTIFICACIÓN DEL PISO CRÍTICO Y ELEMENTOS ESTRUCTURALES PRINCIPALES CON DAÑO SEVERO/COMPLETO
+Pisos Inspeccionados
+Piso Crítico
+Acceso a miembros estructurales principales
+Todos
+Casi todos
+Pocos
+Ninguno
+Nº de elementos con daño Severo/Completo (N)
+Columna / Unión
+Muro de
+concreto
+Muro
+Mampostería
+Viga,
+arriost.
+Riesgo Estructural por daño Severo/Completo
+No hay (N=0) continuar inspección
+C. Alto N≥1)
+Si el Riesgo Estructural es catalogado como C. Alto, no continúe la inspección interna, vaya al punto 6 y coloque Etiqueta roja.
+4. INSPECCIÓN DE ELEMENTOS ESTRUCTURALES PRINCIPALES CON DAÑO MODERADO EN EL PISO CRÍTICO
+Tipo de Elemento
+Número de elementos examinados en piso crítico
+Nº de Elementos examinados
+% de Elementos con daño
+Moderado
+Sin daño/Menor
+Moderado
+Columna o unión
+Muro de concreto
+Muro de mampostería
+Viga o elemento de arriostramiento
+Calificar usando el mayor % de la tabla anterior o estimar el % de daño Moderado cuando no sea posible cuantificar.
+Riesgo Estructural por Daño Moderado
+A. Bajo (< 10%)
+B. Medio (10-30%)
+C. Alto (>30%)
+5. INSPECCIÓN DE OTROS ELEMENTOS ESTRUCTURALES Y COMPONENTES NO ESTRUCTURALES (calificar daños)
+Componente
+a. Bajo
+b.  Medio
+c.Alto
+Losas/balcones/techos
+Sin o poco daño
+Grietas/deformación visible
+Riesgo de colapso
+Paredes/escaleras/fachadas
+Sin o poco daño
+Grietas/Separación
+Riesgo de caída
+Tanques/antenas/avisos/similar
+Sin o poco daño
+Deformación visible
+Riesgo de caída
+Gas, agua, electricidad
+Sin o poco daño
+Separación y/o deformación
+Fuga de gas
+Ascensores, equipos, otros
+Sin o poco daño
+Separación y/o deformación
+Riesgo de caída
+Riesgo de Componentes
+A. Bajo (Todos a ó b=1)
+B. Medio (b≥2 y c=0)
+C. Alto (c≥1)
+6. RIESGO ASOCIADO AL DAÑO Y RECOMENDACIÓN DE ACCESO (tomar el Riesgo más desfavorable entre los Puntos 2, 3, 4 y 5)
+A.  Bajo
+B.  Medio
+C.  Alto
+Acceso permitido Etiqueta verde
+Acceso restringido Etiqueta amarilla
+Acceso no permitido
+Etiqueta roja
+7. ACCIONES RECOMENDADAS
+Inspección Detallada
+Estructura
+Geología o Geotecnia
+Instalaciones
+Medidas de Prevención
+Acordonar
+Cerrar calles
+Apuntalar
+Desconectar gas
+Desconectar electricidad
+Otra (en observaciones)
+NOTA IMPORTANTE: Pueden existir situaciones no previstas que se escapan al alcance de esta inspección. El responsable de la edificación y sus residentes deben solicitar hacer los estudios adicionales y reparaciones requeridas. Las condiciones
+de estabilidad de la edificación pueden cambiar y en dicho caso deberán pedir una nueva evaluación a las autoridades.
+EVALUACIÓN RÁPIDA DE DAÑOS EN EDIFICACIONES
+Si lo considera necesario, escriba observaciones y/o dibuje croquis de planta (piso crítico).
+MANUAL DE CAMPO
+Instrucciones básicas para el llenado de la planilla y el trabajo de campo.
+MATERIAL NECESARIO: Identificación institucional, libreta, lápiz o bolígrafo, tabla de apoyo, dispositivo móvil con cámara e internet, fisurómetro, cinta métrica, plomada de 60 cm, martillo, linterna, líquidos para hidratación. Tapabocas y gel desinfectante. Etiquetas.
+SEGURIDAD: Cada inspector debe llevar casco, botas y lentes de seguridad, así como chaleco con cintas reflectantes y/o colores resaltantes. Antes de entrar a la edificación recorra el perímetro y verifique que no haya peligro de derrumbe. Evite exponerse/colocarse debajo de objetos en peligro de caer. No toque ni se exponga a cables de energía eléctrica. Si huele a gas, contactar al propietario y cerrar la fuente de gas, notificar a bomberos y desalojar y acordonar el lugar.
+INDICACIONES PARA USO DEL INSTRUMENTO (Para mayor detalles, ver el Manual de Entrenamiento). ENCABEZADO: Tipo de Evento que originó la inspección: Sismo, Deslizamiento de tierra, Asentamiento, Explosión, otro. Fecha del evento: indique día/mes/año de la ocurrencia del evento, por ejemplo: Sismo 04/11/2019.
+Fecha de la inspección: Coloque fecha de la inspección y luego la hora del inicio y de la finalización correspondiente.
+INFORMACIÓN GENERAL
+Coordenadas: La Latitud y la Longitud de ubicación del sitio puede conseguirlas con la herramienta Google Maps. Uso de la Edificación: Si la edificación tiene más de un uso, indique el uso predominante.
+Material y Tipo Estructural: Coloque el tipo predominante del material que constituye la estructura. Por Mampostería informal se entiende las viviendas populares con predominancia de paredes de bloques que soportan el techo.
+INSPECCIÓN EXTERNA
+Por riesgo geológico se entiende deslizamiento, licuación, socavación, agrietamiento del terreno. Inclinación del edificio: Cuelgue la plomada de 60 cm de longitud sobre la pared inclinada del edificio y mida la distancia horizontal d (cm) y luego marque en la casilla que corresponda: si no observa inclinación; si d es menor o igual que 2 cm, o si d es mayor que 2 cm.
+INSPECCIÓN DE ELEMENTOS ESTRUCTURALES PRINCIPALES
+Señale cuál es el piso crítico. Inspeccione todos sus elementos accesibles. Señale la cantidad de elementos examinados (columnas, muros) según los daños observados. Efectúe la sumatoria de elementos examinados de acuerdo a su grupo (columnas, muros, otro), y calcule el
+% de elementos dañados (cociente de la cantidad de elementos / la sumatoria de elementos). Si no es posible visualizar los elementos estructurales, haga una estimación del % de la estructura con Daño Moderado y seleccione la casilla que mejor le corresponde. Diga si hay por lo menos un elemento con daño severo/Completo. Tome algunas fotos de los elementos más dañados.
+INSPECCIÓN DE OTROS ELEMENTOS ESTRUCTURALES Y COMPONENTES NO ESTRUCTURALES
+Se entiende como Riesgo de caída cuando se comprometa la seguridad de los ocupantes de la edificación.
+La información a continuación es una guía de carácter general. Para mayores detalles sobre daños, ver el Manual de Entrenamiento.
+ElementoSin Daño/LeveModeradoSevero/Completo Columna, viga, losa,Grietas ˃ 2 mm
+techo, unión.Grietas ˂ 1 mm1 mm ≥ Grietas ˂ 2 mmCaída de recubrimiento
+Concreto armadoPandeo o fractura de barras
+Desplazamiento residual.
+MuroGrietas ˃ 6mm
+Concreto armadoGrietas ˂ 2 mm.2 mm ≥ Grietas ˂ 6 mmCaída de recubrimiento
+Pandeo o fractura de barras
+Desplazamiento residual.
+Paredes de relleno1 mm ≥ Grietas ˂ 10 mmDerrumbe parcial o total de porciones de la
+MamposteríaGrietas ˂ 1 mmGrietas diagonalespared.
+Desprendimiento en algunas zonas
+Columna, viga, unión.PequeñasPandeo incipiente en secciones de vigasPandeo local. Fractura en la sección de viga o
+Acerodeformaciones, casio columnascolumna o en planchas. Fractura de soldadura o
+imperceptiblestornillos. Fractura de placa base.
+Etiquetas: Coloque la Etiqueta seleccionada (Verde, Amarilla o Roja) en un sitio claramente visible a la entrada de la Edificación.
+Esta decisión no garantiza la seguridad ante eventos futuros adversos.
+INSPECTORES
+Firmas
+
+...[total chars: 7991]...
+
+================================================================================
+FILE: C:\Users\Angel\Downloads\Evaluación de Daños BOLETIN 61 ANIH.docx
+================================================================================
+Boletín de la Academia Nacional de la Ingeniería y el Hábitat. ISSN 1317-6781 Caracas, Nº 61. Octubre-Diciembre 2023: 8 – 31
+Recibido: octubre 2023
+Aprobado: noviembre 2023
+EVALUACIÓN RÁPIDA DE DAÑOS EN EDIFICACIONES
+Oscar Andrés LÓPEZ 1, Gustavo CORONEL D. 2, Carmen GINÉS 3, Félix FIERRO 3, Angelo MARINILLI 4 y Alfredo URICH 5
+RESUMEN
+Se presenta una metodología para la evaluación de edificaciones dañadas por la acción de eventos socio-naturales o tecnológicos, tales como terremotos, incendios, inundaciones, explosiones, deslizamientos de tierra, asentamientos del terreno u otros. Consiste en una inspección de corta duración que permite la toma de decisiones sobre la seguridad estructural y la definición de su grado de habitabilidad o uso. El resultado es la colocación de una etiqueta que especifique su condición de acceso: a) permitido, b) restringido o c) no permitido. Esta evaluación deberá ir acompañada posteriormente por una inspección detallada de aquellas edificaciones con daños que fueron catalogadas de acceso restringido o no permitido, a fin de decidir si la edificación debe ser reparada, reforzada o demolida. La metodología se presenta en cuatro documentos: 1) Una planilla de captación de datos denominada Evaluación de Daños en Edificaciones, la cual incluye un Manual de Campo con instrucciones básicas a seguir durante la inspección; 2) las Etiquetas, que definen el acceso a la edificación y 3) El Manual de Entrenamiento, que consiste en una guía con material gráfico, comentarios y 4) Un ejemplo de aplicación de la metodología en un edificio dañado durante un sismo.
+ABSTRACT
+Rapid evaluation of damage in buildings
+A methodology is presented for the evaluation of buildings damaged by the action of socio-natural or technological events, such as earthquakes, fires, floods, explosions, landslides, land settlements or others. It consists of a short-term inspection that allows decisions to be made about structural safety and the definition of its degree of habitability or use. The result is the placement of a label that specifies its access condition: a) allowed, b) restricted or c) not allowed. This evaluation must subsequently be accompanied by a detailed inspection of those buildings with damage that were classified as having restricted or not permitted access, in order to decide whether the building should be repaired, reinforced or demolished. The methodology is presented in four documents: 1) A data collection form called Building Damage Assessment, which includes a Field Manual with basic instructions to follow during the inspection; 2) the Labels, which define access to the building and 3) The Training Manual, which consists of a guide with graphic material, comments and 4) An example of application of the methodology in a building damaged during an earthquake.
+Palabras clave: Daños estructurales, evaluación edificios, inspección post terremoto, inspección rápida.
+Keywords: Structural damage, building evaluation, post-earthquake inspection, rapid inspection.
+CONTENIDO
+OBJETIVOS, ANTECEDENTES Y ALCANCE
+EVALUACIÓN RÁPIDA DE DAÑOS EN EDIFICACIONES (PLANILLA) Y MANUAL DE CAMPO
+ETIQUETAS
+MANUAL DE ENTRENAMIENTO
+ENCABEZADO
+INFORMACIÓN GENERAL
+INSPECCIÓN EXTERNA
+Colapso de la estructura
+Peligro por edificios aledaños
+Peligro geológico o geotécnico
+Asentamiento del edificio
+Inclinación del edificio
+Decisión sobre la continuación de la inspección
+IDENTIFICACIÓN DEL PISO CRÍTICO Y ELEMENTOS ESTRUCTURALES PRINCIPALES CON DAÑO SEVERO/COMPLETO
+1 Ingeniero Civil, Ph.D., Fundación Venezolana de Investigaciones Sismológicas. Individuo de Npumero de la Academia Nacional de la Ingeniería y el Hábitat. Correo-e.: oalsf@yahoo.com
+2 M.Sc., Candidato Doctoral, Instituto de Materiales y Modelos Estructurales, Facultad de Ing., UCV.
+3 Ing. Civil, Fundación Venezolana de Investigaciones Sismológicas FUNVISIS.
+4 Dr. I., Instituto de Materiales y Modelos Estructurales, Facultad de Ingeniería, UCV.
+5 M.Sc., B.R.S. Ingenieros, C.A.
+INSPECCIÓNDEELEMENTOS ESTRUCTURALES PRINCIPALES CON DAÑO MODERADO EN EL PISO CRÍTICO
+Columnas de Concreto Armado
+Uniones de Concreto Armado
+Vigas de Concreto Armado
+Muros de Concreto Armado
+Estructuras de Acero
+Muros Portantes de Mampostería Estructural
+INSPECCIÓN DE OTROS ELEMENTOS ESTRUCTURALES Y COMPONENTES NO ESTRUCTURALES
+Paredes de Relleno
+RIESGOASOCIADOALDAÑOY RECOMENDACIÓN DE ACCESO
+ACCIONES RECOMENDADAS
+EJEMPLO DE APLICACIÓN
+ENCABEZADO
+INFORMACIÓN GENERAL
+INSPECCIÓN EXTERNA:
+IDENTIFICACIÓN DEL PISO CRÍTICO Y ELEMENTOS ESTRUCTURALES PRINCIPALES CON DAÑO SEVERO/COMPLETO
+INSPECCIÓNDEELEMENTOS ESTRUCTURALES PRINCIPALES CON DAÑO MODERADO EN EL PISO CRÍTICO
+INSPECCIÓN DE OTROS ELEMENTOS ESTRUCTURALES Y COMPONENTES NO ESTRUCTURALES
+RIESGO ASOCIADO AL DAÑO Y RECOMENDACIONES DE ACCESO
+ACCIONES RECOMENDADAS
+AGRADECIMIENTOS
+REFERENCIAS
+OBJETIVOS, ANTECEDENTES Y ALCANCE
+Este informe técnico tiene como finalidad presentar una metodología para la evaluación de edificaciones dañadas mediante una inspección de corta duración. Las edificaciones
+pueden haber sido afectadas en su estructura o en sus componentes arquitectónicos y de servicios, por acciones extraordinarias o accidentales, de tipo naturales o antrópicas, tales como terremotos, inundaciones, explosiones, deslizamientos de tierra, asentamientos del terreno u otros. No se presentan en este informe la tipificación de daños por incendio o por corrosión, los cuales se incorporarán en una futura versión.
+El objetivo principal de este documento es prestar asistencia técnica a los inspectores que realizan evaluaciones rápidas de edificaciones que hayan sido afectadas en su integridad estructural.
+Debe tenerse presente que la toma de decisiones sobre edificaciones dañadas, debe apoyarse en tres inspecciones y evaluaciones distintas, de las cuales la metodología aquí tratada sólo se refiere a la primera inspección. Las tres inspecciones se definen a continuación:
+Evaluación Rápida de Daños en Edificaciones: Esta inspección de corta duración suministra un primer dictamen de la seguridad estructural, que define su grado de habitabilidad o uso y concluye con la colocación de un cartel o etiqueta que defina su condición de acceso: a) permitido, b) restringido o c) no permitido.
+Inspección Detallada: Esta es una inspección especializada que se realiza a las edificaciones que fueron catalogadas con etiquetas Roja o Amarilla en la Evaluación Rápida. Su finalidad es decidir si la edificación puede o debe ser reparada o reforzada o demolida.
+Evaluación Detallada para la Reparación o Refuerzo de la Edificación: La intención de esta evaluación es desarrollar los documentos técnicos y planos para la reparación y el refuerzo estructural de la edificación, bajo el marco de las normas técnicas nacionales.
+El diagrama presentado en la Figura 1 sintetiza el proceso de evaluación de una edificación.
+Figura 1. Proceso de Evaluación de una Edificación.
+Este informe consta de cuatro documentos los cuales se presentan y discuten a continuación:
+Evaluación Rápida de Daños en Edificaciones (Planilla) y Manual de Campo
+Etiquetas
+Manual de Entrenamiento
+Ejemplo de Aplicación
+EVALUACIÓN RÁPIDA DE DAÑOS EN EDIFICACIONES (PLANILLA) Y MANUAL DE CAMPO
+En la Figura 2.a se muestra la primera página de la Planilla Evaluación Rápida de Daños en Edificaciones, este instrumento es usado para la captación de los datos durante la inspección y puede ser llenada en físico o digitalmente. La inspección es de corta duración, no es una inspección detallada de la edificación, su finalidad es la de tomar decisiones sobre el acceso a la construcción afectada por el evento, lo cual depende de los daños y del riesgo asociado. El inspector debe decidir entre tres opciones:
+Acceso permitido (Tarjeta verde)
+Acceso restringido (Tarjeta amarilla)
+Acceso no permitido (Tarjeta roja)
+El llenado de la Planilla debe ser ejecutado por personas que tengan el Certificado de Inspector de Evaluación de Daños que otorga la autoridad competente. La inspección deberá ser efectuada preferiblemente la primera semana después de la ocurrencia del evento.
+El uso de la Planilla se limita a la inspección de edificios, no está diseñada para otras construcciones tales como instalaciones y equipos eléctricos, refinerías, plantas industriales, puentes, etc.
+La metodología de inspección y procesamiento fue desarrollada teniendo como referencia la experiencia tanto nacional como internacional, por ejemplo, las propuestas elaboradas por Coronel et al. (2019), Pérez y Rodríguez (2018), González et al. (2018) y la metodología que siguen en Chile (MOP, 2017), basadas principalmente en la metodología de Japón (Kaminosono et al. 2002; Tami y Sato, 2017), las cuales son extendidas y optimizadas en esta investigación. También se consultaron las metodologías que siguen en USA para terremotos e inundaciones (ATC, 2004; ATC, 2005). La versión inicial del instrumento fue elaborada con el apoyo del equipo del Departamento de Ingeniería Sísmica (DIS) de Funvisis y luego afinada y mejorada por el Comité Evaluador del Instrumento de Inspección Post-Sísmica.
+Este instrumento de inspección se aplica solamente a edificaciones dañadas, por cualquier evento socio-natural, y por tanto tiene una finalidad diferente a la del instrumento ya existente de inspección de edificaciones para asignar vulnerabilidad y riesgo y priorizar edificaciones, el cual se aplica a construcciones existentes (sin daños o dañadas), con fines de la gestión del riesgo sísmico (López et al., 2014).
+La Figura 2.b presenta la segunda página de la Planilla la cual contiene un espacio para agregar observaciones o dibujos, el Manual de Campo y un espacio para colocar las firmas de los inspectores. El Manual de Campo es una guía con instrucciones básicas relativas a la inspección y una lista del material a llevar y de las medidas de seguridad que deben cumplir los integrantes del equipo inspector. Contiene también las indicaciones generales para el correcto llenado de la Planilla de inspección, pero no es un sustituto del Manual de Entrenamiento, el cual constituye el apoyo fundamental durante el taller de capacitación de los inspectores.
+Figura 2.a. Planilla Evaluación Rápida de Daños en Edificaciones y Manual de Campo. Página 1.
+Figura 2.b. Planilla Evaluación Rápida de Daños en Edificaciones y Manual de Campo. Página 2.
+ETIQUETAS
+Son tres etiquetas que se muestran en la Figura 3, de las cuales una de ellas debe colocarse en un sitio visible en el área de ingreso principal a la edificación, al finalizar la inspección. Ellas se identifican con un color: a) Tarjeta verde, que significa que el acceso está permitido, b) Tarjeta amarilla que significa que el
+acceso está restringido, y c) Tarjeta roja la cual significa que el acceso a la edificación está impedido. En la tarjeta debe colocarse el Número de la Planilla de Inspección que justifica la decisión tomada, la firma e identificación completa de los inspectores, y el nombre y la dirección completa de la edificación.
+Figura 3. Etiquetas Verde, Amarilla y Roja.
+MANUAL DE ENTRENAMIENTO
+El Manual de Entrenamiento contiene recomendaciones para el correcto llenado del instrumento (Planilla) de captación de datos durante la inspección y es la base del taller de formación que deben realizar los inspectores antes de aplicar el instrumento de inspección.
+El Manual presenta un conjunto de imágenes ilustrativas, fotografías y comentarios que guían al inspector para el llenado correcto de la Planilla y facilita la asignación del daño a los elementos estructurales y a los componentes no estructurales durante la inspección. Este Manual de Entrenamiento extiende y complementa la información resumida que está contenida en
+el Manual de Campo que constituye la segunda página de la Planilla.
+A continuación, se presentan las instrucciones generales para la captura de información siguiendo el mismo orden y numeración que aparece en el contenido de la Planilla (Figura 2.a):
+ENCABEZADO
+Tipo de evento: identificar el evento que originó la inspección, si es un sismo, deslizamiento de tierra, asentamiento del terreno, inundación, explosión u otro.
+Fecha del evento: indicar día/mes/año de la ocurrencia del evento, por ejemplo: 04/11/2019.
+Fecha de la inspección: colocar la fecha de la inspección, por ejemplo: 10/11/2019.
+Hora Inicio: ejemplo: 8:30 a.m.
+Hora Terminación: ejemplo: 11:00 a.m.
+INFORMACIÓN GENERAL
+Coordenadas: La Latitud y la Longitud del sitio se pueden obtener usando la herramienta Google Maps del teléfono móvil. Ubicando en el mapa la zona de interés y haciendo clic se muestran las coordenadas. Ejemplo: para el Estadio Universitario de la Universidad Central de Venezuela una vez posicionado se obtiene: Latitud: 10.48541 y Longitud: - 66.89270.
+Uso predominante de la Edificación: Si la edificación tiene más de un uso, se debe marcar el uso predominante. La denominación “Seguridad” se refiere a edificaciones de bomberos, protección civil, policial y militar.
+Nº de Personas: Indique el número de personas que habitan la construcción, si es una vivienda. Si tiene otro uso indique el número promedio de personas que hacen uso de la construcción.
+Nº de Pisos: Indique el número de niveles (losas) por encima del nivel del terreno. No incluya los sótanos si los hubiese.
+Nº de Sótanos: Indique el número de niveles que están totalmente por debajo del nivel del terreno.
+Nº de Semisótanos: Indique el número de niveles que están parcialmente por debajo del nivel del terreno.
+Año de Construcción: Indique el año en el cual se construyó la edificación. Si el dato no se conoce, coloque: No sabe.
+Material predominante de la Estructura: Coloque el tipo predominante del material que constituye la estructura. Por Mampostería informal se entiende las viviendas populares con predominancia de paredes de bloques que soportan el techo. Por Mampostería formal se entiende las edificaciones con
+muros de bloques o de ladrillos, confinados o reforzados internamente, localizadas en zonas de construcción planificada siguiendo normas técnicas.
+INSPECCIÓN EXTERNA
+El propósito de este examen es determinar el nivel de Riesgo Externo, con base en un recorrido alrededor del edificio, sin necesidad de ingresar a la edificación y decidir entre las tres opciones posibles: Bajo, Medio o Alto.
+Colapso de la estructura
+Las fotografías de la Figura 4 ilustran tres ejemplos del colapso de una estructura, y califican el riesgo de acuerdo a las definiciones contenidas en el Instrumento de Inspección en el cual se considera como Riesgo Alto las condiciones de Colapso: Posible, Parcial o Total.
+La Figura 4.a presenta un edificio desplazado varios centímetros hacia la izquierda durante un sismo, donde la deformación se concentró en la planta baja y hay posibilidad de que se produzca el derrumbe si por ejemplo ocurriese una réplica del sismo, por lo que se cataloga como Colapso Posible.
+La Figura 4.b muestra el colapso de un módulo de la escuela Valentín Valiente durante el sismo de Cariaco (1997). Aun cuando hubo la falla de las columnas de soporte, el edificio permaneció parcialmente en pie debido a que las losas quedaron apoyadas sobre las paredes, lo cual es un suceso fortuito que no se debe esperar que ocurra. La falla de este edificio se puede catalogar como un Colapso Total debido a la pérdida de la capacidad portante de las columnas.
+La Figura 4.c expone el colapso total del edificio Mijagual durante el sismo de Caracas (1967), las losas del edificio quedaron aplastadas una sobre otra sobre el nivel del terreno.
+a)Riesgo Alto Colapso Posible
+(Archivo OPS)
+b)Riesgo Alto Colapso Total
+(Foto Archivo FUNVISIS)
+c)Riesgo Alto Colapso Total (NISEE)
+Figura 4. Ejemplos de edificios para la definición de colapso de la estructura.
+Peligro por edificios aledaños
+La Figura 5 muestra ejemplos del peligro inducido por daños en edificios aledaños al sitio en estudio. En la Figura 5.a se observa el peligro que representa a los edificios de la derecha el equilibrio precario y los escombros del edificio colapsado que está a la izquierda, ocurrido en el sismo de México de 2017.
+La Figura 5.b muestra una condición más crítica de riesgo alto debido al peligro elevado de volcamiento del edificio luego del sismo de Armenia, Colombia de 1999. El edificio de la derecha se volcó totalmente con una réplica horas después. La Figura 5.c muestra otro caso de riesgo alto que representa este edificio en Pedernales luego del sismo de Ecuador del 2016.
+a)Riesgo Medio Peligro Moderado
+(Foto El Universal, México)
+b)Riesgo Alto Peligro Elevado
+(Foto EERI)
+c)Riesgo Alto Peligro Elevado (Foto Urich A., 2016 )
+Figura 5. Ejemplos de edificios en peligro por la afectación de edificios aledaños.
+Peligro geológico o geotécnico
+Por peligro geológico o peligro geotécnico se entiende el agrietamiento del terreno o del pavimento, deslizamiento de taludes, licuación o socavación del terreno, en los alrededores de la construcción. La Figura 6 muestra ejemplos de riesgo Medio y riesgo Alto debido a peligro geológico. La Figura 6.a
+es un caso en el sismo de Manta en Ecuador (2016) que muestra agrietamiento importante en el pavimento alrededor de una construcción debido al asentamiento de la misma. La Figura 6.b muestra un riesgo alto asociado al elevado peligro de derrumbe de la vivienda ocasionado por el deslizamiento del talud en Japón.
+a)Riesgo Medio Peligro Moderado (MIDUVI, 2016)
+b)Riesgo Alto Peligro Elevado (Tami y Sato, 2015)
+Figura 6. Ejemplo de edificios con peligro geológico o geotécnico.
+Asentamiento del edificio
+Los asentamientos de un edificio pueden ocurrir al fallar el sistema estructural de fundación que trasmite las cargas al suelo o por la pérdida de la capacidad de soporte del suelo.
+La Figura 7 muestra los tres tipos de asentamiento básicos en una edificación. Generalmente se presentan como una combinación de ellos.
+a)Asentamiento uniforme
+b) Asentamiento con inclinación.
+c)Asentamiento no uniforme
+Figura 7. Tipos de asentamiento de un edificio (Buyers Ask, 2019).
+La Figura 8.a muestra un asentamiento uniforme observado en el sismo de México de 1985. La Figura 8.b muestra un
+asentamiento con inclinación ocurrido en Caraballeda durante el sismo de Caracas de 1967.
+a)Riesgo Alto Asentamiento uniforme ( 1 m),
+(Jaimes, 2015)
+a)Riesgo Alto
+Asentamiento ˃ 1 m, acompañado de inclinación,
+(Martin, 2021)
+Figura 8. Ejemplos de asentamientos de Edificios.
+Inclinación del edificio
+La Inclinación del edificio se puede determinar con la plomada que se muestra en la Figura 9, que consiste en un peso sostenido por una cuerda de 60 cm de largo, la cual se fija a un punto sobre el edificio. Para hacer la medición, cuelgue la plomada sobre la pared inclinada del edificio y mida la distancia horizontal d (cm) y luego marque en la Planilla la casilla que corresponda.
+La inclinación está representada por el cociente obtenido de dividir la distancia horizontal d entre la longitud de la cuerda (d/60 cm). Hay tres respuestas posibles: a) no se presenta inclinación, b) si d es menor o igual que 2 cm (Hasta 2cm/60 cm), o c) si d es mayor que 2 cm (Mayor que 2 cm/60 cm).
+Figura 9. Plomada para medir la inclinación del edificio
+La Figura 10 muestra ejemplos de edificios inclinados. La Figura 10.a muestra la torre de Pisa en Italia con una gran inclinación que supera ampliamente el valor 2 cm/60 cm. La Figura 10.b muestra tres edificios en Japón después del sismo de Nigata de 1964 que se inclinaron debido a licuación del
+terreno de soporte. Los edificios tienen diferentes grados de inclinación, pero todos exceden ampliamente el valor de 2 cm/60 cm por lo que el Riesgo Externo se califica como Alto.
+a)Riesgo Alto Inclinación mayor a 2cm/60cm.
+(BRI, 2002)
+b)Riesgo Alto Inclinación mayor a 2cm/60cm.
+(NISEE, 2021)
+Figura 10. Ejemplos de inclinación de edificios.
+Decisión sobre la continuación de la inspección
+El Inspector debe colocar la letra que le corresponda en la última fila denominada Riesgo Externo, entre las tres opciones indicadas en la Tabla 1.
+Tabla 1. Calificación del Riesgo Externo.
+RIESGO
+EXTERNO
+CONDICIÓN
+A. Bajo
+Todos los aspectos evaluados tienen la
+calificación “a”
+B. Medio
+Al menos un aspecto evaluado tiene la calificación “b” y no hay ninguno con la
+calificación “c”.
+C. Alto
+Al menos un aspecto evaluado tiene la
+calificación “c”
+Si el Riesgo Externo queda catalogado como C. Alto, no es necesario continuar con la inspección interna.
+Vaya al punto 6. RIESGO ASOCIADO AL DAÑO Y
+RECOMENDACIÓN DE ACCESO, rellene la opción Riesgo C (Alto) y coloque la Etiqueta Roja de Acceso No Permitido.
+Finalmente, pase al Punto 7 y seleccione las ACCIONES RECOMENDADAS. Tome algunas fotos de los aspectos que usted considere más importantes de la inspección externa.
+IDENTIFICACIÓN DEL PISO CRÍTICO Y ELEMENTOS ESTRUCTURALES PRINCIPALES CON DAÑO SEVERO/COMPLETO
+El piso crítico es el piso del edificio donde se puede apreciar una mayor concentración de los daños. La calificación de los daños en los elementos estructurales será hecha únicamente en el piso crítico.
+Identifique y anote el piso seleccionado como piso crítico e indique si se tuvo acceso a todos, casi todos, pocos o a ninguno de los miembros estructurales principales.
+Examine las columnas y sus uniones, los muros de concreto y los muros de mampostería, las vigas y los elementos de arriostramiento, a los cuales pueda tener acceso. Los muros de mampostería son muros de carga, que soportan losas de entrepiso y techos, las paredes de relleno se tratan en el Punto 5.
+Contabilice y anote en la Planilla el número de elementos con daño Severo o daño Completo. Para catalogar un elemento con daño Severo o con daño Completo use como guía las imágenes y fotografías que se presentan en las Figuras 11 a 23.
+Si hay uno o más elementos con daño Severo o Completo, se asigna el Riesgo Estructural C. Alto y no es necesario continuar la inspección.
+Tome algunas fotos de los elementos más dañados y vaya al punto  6.  RIESGO  ASOCIADO  AL  DAÑO  Y
+RECOMENDACIÓN DE ACCESO, rellene la opción Riesgo C. (Alto) y coloque la Etiqueta roja de Acceso No Permitido. Finalmente, pase al Punto 7 y seleccione las ACCIONES RECOMENDADAS.
+Si no hay elementos con daño Severo o Completo, prosiga con el Punto 4.
+INSPECCIÓNDEELEMENTOS ESTRUCTURALES PRINCIPALES CON DAÑO MODERADO EN EL PISO CRÍTICO
+Recorra el piso crítico e identifique los elementos estructurales más dañados. Complete la información solicitada solamente para el Tipo de Elemento más dañado entre las cuatro alternativas:
+Columna o unión
+Muro de concreto
+Muro de mampostería
+Viga o elemento de arriostramiento
+Identifique el grado de daño en el Tipo de Elemento seleccionado, entre dos opciones posibles: Sin Daño/Menor y Moderado, siguiendo los lineamientos indicados gráficamente en las Figuras 11 a 23.
+Contabilice el número de elementos examinados y el número de elementos con cada tipo de daño. Calcule el porcentaje (%) de Elementos con daño Moderado como el cociente de la cantidad de elementos con daño Moderado dividido entre el número de elementos examinados, multiplicado por 100.
+Proceda a llenar la última fila para catalogar el Riesgo Estructural por Daño Moderado. Seleccione si es: A (Bajo), B (Medio) o C (Alto) con base al % de Elementos con Daño Moderado, como se muestra en la Tabla 2.
+Tabla 2. Riesgo estructural por daño moderado.
+RIESGO ESTRUCTURAL POR
+DAÑO MODERADO
+CONDICIÓN
+A. Bajo
+El porcentaje de elementos con Daño Moderado es menor a 10%
+B. Medio
+El porcentaje de elementos con Daño Moderado varía entre 10%
+y 30%
+C. Alto
+El porcentaje de elementos con Daño Moderado es mayor a 30%
+En el caso particular de que los elementos no estén totalmente visibles por estar ocultos entre las paredes y se dificulte contabilizar su número, haga una estimación del % de la estructura con Daño Moderado y seleccione en la última fila el porcentaje (%) de Elementos con daño Moderado que mejor le corresponde entre las opciones de Riesgo: A (Bajo), B (Medio) o C (Alto).
+Tome algunas fotos de los elementos más dañados y continúe con el Punto 5.
+Columnas de Concreto Armado
+La Figura 11 facilita clasificar el tipo de daño en columnas de concreto armado entre cuatro opciones posibles: Menor, Moderado, Severo y Completo. El Daño Severo se define no solo por el ancho de la grieta sino que va además acompañado del desconchado y caída de porciones del concreto.
+a) Daño Menor Ancho de Grietas: Menor de 1 mm
+b)Daño Moderado Ancho de Grietas: Entre 1 y 2 mm
+c) Daño Severo Ancho de Grietas: Mayor de 2 mm.
+Desconchado del concreto.
+d) Daño Completo Caída de porciones de concreto, pandeo de barras. Acortamiento
+de la columna.
+Figura 11. Daños en columnas de concreto armado. Adaptado de Kaminosono et al., 2002.
+La Figura 12 presentan ejemplos de daños en columnas observados en terremotos pasados ocurridos en Venezuela y en otros países.
+Uniones de Concreto Armado
+La Figura 13 orienta la clasificación del daño en juntas (nodos) de concreto armado.
+a) Daño Moderado
+Liceo Raimundo Martínez Centeno,
+Cariaco 1997 (Foto E. Castilla)
+b)Daño Severo
+Edificio La Mar Suites, Tucacas 2009 (Foto A. Urich)
+c) Daño Completo
+Escuela en Arenales, Curarigua 1991 (Foto A. Morón)
+d)Daño Completo Liceo Raimundo Martínez Centeno,
+Cariaco 1997 (Foto G. Malavé)
+e) Daño Completo Falla por cortante, Hotel Macuto Sheraton, 1967.
+(NISEE, 2021)
+f) Daño Completo
+Aplastamiento del concret pandeo de barras. (NISEE, 2021)
+g) Daño Completo
+Falla por cortante en columna corta. (NISSE, 2021)
+h) Daño Completo
+Pérdida de concreto y pandeo de barras.
+Edificio Petunia, Caracas, 1967
+(NISEE, 2021)
+Figura 12. Ejemplos de daños en columnas de concreto armado.
+a) Daño Menor
+Caída parcial del recubrimiento de concreto
+b) Daño Moderado
+Caída del recubrimiento y exposición del acero
+c) Daño Severo
+Caída del recubrimiento y grietas diagonales
+d) Daño Completo
+Aplastamiento del concreto, pandeo de barras
+Figura 13. Daños en juntas (nodos) de concreto armado. Adaptado de Kaminosono et al., 2002.
+La Figura 14 presenta ejemplos de daños observados en sismos ocurridos en Venezuela y de daños generados en ensayos de laboratorio.
+a) Daño Menor
+Liceo Raimundo Martínez Centeno, Cariaco 1997
+(Foto E. Castilla)
+b)Daño Moderado
+Pedernales 2016 (Foto A. Urich)
+c)Daño Severo Ensayo IMME (Foto E. Castilla)
+d) Daño Completo Pedernales 2016 (Foto A. Urich)
+Figura 14. Daños en juntas (nodos) de concreto armado.
+Vigas de Concreto Armado
+Los tipos de daños más comunes en vigas de concreto armado se muestran la Figura 15. Notar que los niveles de dañó
+Moderado y Severo se definen no solamente por el ancho de la grieta, sino también por los otros indicadores que lo acompañan (aplastamiento local y pérdida de recubrimiento).
+a)Daño Menor
+Ancho de grietas  1 mm
+b)Daño Moderado
+Grietas entre 1 mm y 2 mm Aplastamiento local
+c)Daño Severo
+Ancho de grietas  2 mm Aplastamiento local y amplia pérdida del recubrimiento
+d)Daño Completo
+Caída de concreto, doblado de barras, desplazamiento vertical visible
+Figura 15. Daños en vigas de concreto armado. Adaptado de Kaminosono et al., 2002.
+Las fotografías de la Figura 16 muestran ejemplos de daños observados en vigas en edificios, en los sismos de 1967, 1997 y 2018 en Venezuela.
+1.Daño Menor
+Sismo de Yaguaraparo 2018 (Foto A. Urich)
+2.Daño Moderado
+Caracas 1967,
+(NISEE, 2021)
+3.Daño Severo
+Liceo Raimundo Martínez Centeno, Cariaco 1997,
+(Foto E. Castilla)
+4.Daño Severo
+Sismo de Tucacas 2012 (Foto A. Urich)
+5.Daño Completo
+Escuela Valentín Valiente, Cariaco 1997,
+(Foto G. Malavé)
+Figura 16. Ejemplos de daños en vigas de concreto armado.
+Muros de Concreto Armado
+Paras muros de concreto armado se pueden adoptar los siguientes criterios para identificar el tipo de daño, adaptados de Hurtado (2013):
+Daño Menor: Pocas grietas, con ancho menor a 2 mm.
+Daño Moderado: Grietas de ancho entre 2 mm y 6 mm.
+Daño Severo: Caída de recubrimiento del concreto. Posible desplazamiento residual.
+Daño Completo: Grietas anchas, caída de concreto, refuerzo pandeado o fracturado, desplazamiento residual.
+En la Figura 17 se presentan fotografías con ejemplos de daños observados en muros ocasionados por varios sismos y en ensayos de laboratorio.
+a) Daño Menor
+Hawai, 2006 (Simsir et al., 2012)
+b) Daño Moderado
+Laboratorio (Li, et al., 2017)
+c) Daño Severo
+Laboratorio (CENAPRED, 2014)
+d) Daño Completo
+Chile, 2010 (Medina et al., 2010)
+Figura 17. Ejemplos de daños en muros de concreto armado.
+Estructuras de Acero
+Los daños en elementos estructurales de acero se pueden clasificar como se indica a continuación. (AIS, 2002; González et al., 2018).
+Daño Menor: Pequeñas deformaciones, casi imperceptibles. El pandeo en los arriostramientos de pórticos arriostrados concéntricamente, es consistente con el desempeño esperado.
+Daño Moderado: Deformaciones que pueden ser percibidas a simple vista. Pandeo incipiente en secciones de vigas o columnas.
+Daño Severo: Pandeo local en secciones de vigas y columnas, o en las conexiones.
+Daño Completo: Pandeo local y/o fractura en la sección de la viga o la columna o en planchas. Fractura de soldaduras o de tornillos. Fractura de placa base.
+Las Figuras 18 al 21 presentan fotografías de daños típicos en elementos de estructuras de acero observados en los terremotos de Northridge de 1994 en California y de Kobe en 1995 en Japón.
+Se muestran daños en estructuras de pórticos resistentes a momento (Figuras 18 y 19) y en pórticos arriostrados (Figura 20), consistentes en pandeo, fractura de soldaduras, fractura de secciones de vigas y columnas, ruptura de pernos y desgarramiento de placa base. En la Figura 20 se muestra el pandeo del arriostramiento diagonal, así como la fractura en la conexión. La Figura 21 muestra varias fallas en los pernos y en las placas de base de columnas.
+a)Daño Severo
+Fractura en el ala junto a la conexión de soldadura viga- columna. Kobe 1995, (AISC, 2020)
+b) Daño Severo
+Fractura en soldadura que conecta la viga a la columna.
+Northridge 1994, (AISC, 2020)
+Figura 18. Ejemplos de daños en las uniones viga-columna de pórticos de acero.
+a)Daño Completo
+Fractura del ala y del alma de la columna.
+Northridge 1994, (AISC, 2020)
+b) Daño Severo
+Pandeo del ala y cedencia del alma en viga.
+Ensayo en laboratorio, (AISC, 2020)
+Figura 19. Ejemplos de daños en columna y en viga de pórticos de acero.
+a) Daño Menor
+Pandeo del arriostramiento y falla en conexión.
+Kobe 1995, (AISC, 2020)
+b) Daño Completo
+Fractura en el la conexión del arriostramiento.
+Kobe 1995, (AISC, 2020)
+Figura 20. Ejemplos de daños en diagonales de arriostramiento en pórticos arriostrados de acero. El pandeo en el arriostramiento de la izquierda es representativo del desempeño esperado que permite disipar energía por ese mecanismo.
+a) Daño Moderado Deformación de placa base y agrietamiento de soldadura.
+(CENAPRED, 2014)
+b)  Daño Completo
+Desgarramiento de placa base. (CENAPRED, 2014)
+c)  Daño Completo
+Rotura en pernos de la placa base. (CENAPRED, 2014)
+Figura 21. Ejemplos de daños en el apoyo de columnas de acero.
+Muros Portantes de Mampostería Estructural
+Son los muros de mampostería que cumplen una función portante y sostienen las losas o techos. Suelen ser de dos tipos:
+Muros con refuerzo interno (barras de acero)
+Muros confinados con machones y vigas de corona en su perímetro
+Los daños se pueden clasificar como se muestra en la Tabla 3.
+Tabla 3. Tipos de daños en muros portantes de mampostería estructural.
+Severo
+Agrietamiento diagonal severo con anchos mayores a 3 mm. Dislocación de algunas piezas de mampostería
+Completo
+Desprendimiento de parte de piezas, aplastamiento local, prolongación de las grietas diagonales en elementos de confinamiento (machones, vigas de corona), inclinación del muro, desplome
+parcial.
+TIPO DEDAÑODESCRIPCIÓNLeveGrietas con anchos hasta 1 mm en lasuperficie.ModeradoAgrietamiento diagonal incipiente, congrietas entre 1mm y 3 mm.TIPO DEDAÑODESCRIPCIÓNLeveGrietas con anchos hasta 1 mm en lasuperficie.ModeradoAgrietamiento diagonal incipiente, congrietas entre 1mm y 3 mm.La Figura 22 muestra daños en construcciones de mampostería estructural. En la Figura 22.a se muestra un muro con daño moderado, terremoto de México 2019, en la 22.b se presentan daños en muros de mampostería hueca con poco refuerzo interior, durante el sismo de Tehuacán, México, de 1999. En la Figura 22.c se muestran los daños en muros de mampostería simple, sin refuerzo, durante el sismo de Bam, Irán (CENAPRED, 2014).
+TIPO DE
+DAÑO
+DESCRIPCIÓN
+Leve
+Grietas con anchos hasta 1 mm en la
+superficie.
+Moderado
+Agrietamiento diagonal incipiente, con
+grietas entre 1mm y 3 mm.
+TIPO DE
+DAÑO
+DESCRIPCIÓN
+Leve
+Grietas con anchos hasta 1 mm en la
+superficie.
+Moderado
+Agrietamiento diagonal incipiente, con
+grietas entre 1mm y 3 mm.
+a)Daño Moderado Terremoto de México 2019
+(A. Urich)
+b)Daño Severo Muros de mampostería hueca, mal reforzadas (CENAPRED, 2014)
+c)Daño Completo Muros de mampostería sin
+refuerzo. (CENAPRED, 2014)
+Figura 22. Ejemplos de daños en edificios de mampostería estructural.
+INSPECCIÓN DE OTROS ELEMENTOS ESTRUCTURALES Y COMPONENTES NO ESTRUCTURALES
+Complete la información solicitada en esta sección de la página 1 de la Planilla (Figura 2.a), referida al nivel de riesgo (Bajo, Medio, Alto) de los componentes allí indicados.
+Para todos los casos se entiende como riesgo de caída cuando se pone en evidencia la posibilidad de un desprendimiento del componente que comprometa la seguridad de los ocupantes de la edificación y de las personas que circulen en sus cercanías.
+Paredes de Relleno
+La Tabla 4 contiene los criterios para asignar el nivel de riesgo asociado con las paredes o tabiques de relleno de mampostería en estructuras de pórticos de concreto o acero, en algunos de los tres tipos: a (Bajo), b (Medio) y c (Alto).
+Tabla 4. Descripción de daños en paredes de relleno y asignación del riesgo (Adaptado de Urich y López, 2018).
+RIESGO
+CALIFICACIÓN
+DESCRIPCIÓN
+A. Bajo
+Leve
+Grietas muy pequeñas, no
+mayores a 1 mm de espesor
+B. Medio
+Moderadoa Severo
+Grietas de varios mm o cm de espesor. Posible rotura y desprendimiento en algunas zonas como esquinas de la pared o ventana.Grietas
+diagonales.Posible separación entre la pared y
+estructura
+C. Alto
+Completo
+Derrumbeparcialde porciones importantes de la
+pared o derrumbe total
+Las fotografías contenidas en la Figura 23 muestran ejemplos de daños en paredes y del riesgo asignado.
+Riesgo a
+(Daño Leve) Cumaná 2008 (Foto D. Salcedo)
+Riesgo b
+(Daño Moderado)
+Tecomán, 2003
+(CENAPRED, 2014)
+Riesgo b
+(Daño Severo) Tucacas, 2009 (Foto J. González)
+Riesgo c
+(Daño Completo) (Urich y López et al.,
+2018)
+Figura 23. Ejemplos de daños en paredes de relleno y su correspondiente nivel de riesgo.
+RIESGO ASOCIADO AL DAÑOCONDICIÓNETIQUETAA. BajoSi se obtiene algún punto con riesgo A. Bajo y ninguno con riesgo B.Medio o C. AltoVerdeAcceso permitidoB. MedioNingún punto con riesgo C. Alto pero algún punto con riesgo B. MedioAmarillaAcceso restringidoC. AltoSi se obtiene algún punto con riesgo C. AltoRojaAccesono permitidoRIESGO ASOCIADO AL DAÑOCONDICIÓNETIQUETAA. BajoSi se obtiene algún punto con riesgo A. Bajo y ninguno con riesgo B.Medio o C. AltoVerdeAcceso permitidoB. MedioNingún punto con riesgo C. Alto pero algún punto con riesgo B. MedioAmarillaAcceso restringidoC. AltoSi se obtiene algún punto con riesgo C. AltoRojaAccesono permitidoRIESGOASOCIADOALDAÑOY RECOMENDACIÓN DE ACCESO
+RIESGO ASOCIADO AL DAÑO
+CONDICIÓN
+ETIQUETA
+A. Bajo
+Si se obtiene algún punto con riesgo A. Bajo y ninguno con riesgo B.
+Medio o C. Alto
+Verde
+Acceso permitido
+B. Medio
+Ningún punto con riesgo C. Alto pero algún punto con riesgo B. Medio
+Amarilla
+Acceso restringido
+C. Alto
+Si se obtiene algún punto con riesgo C. Alto
+Roja
+Accesono permitido
+RIESGO ASOCIADO AL DAÑO
+CONDICIÓN
+ETIQUETA
+A. Bajo
+Si se obtiene algún punto con riesgo A. Bajo y ninguno con riesgo B.
+Medio o C. Alto
+Verde
+Acceso permitido
+B. Medio
+Ningún punto con riesgo C. Alto pero algún punto con riesgo B. Medio
+Amarilla
+Acceso restringido
+C. Alto
+Si se obtiene algún punto con riesgo C. Alto
+Roja
+Accesono permitido
+Se identificará el Riesgo más desfavorable entre las asignaciones de riesgo hechas en cada uno de los puntos 2, 3, 4 y 5 presentados previamente. Las opciones son las indicadas en la Tala 5.
+Tabla 5. Riesgo asociado al daño, el cual se define seleccionando el riesgo más desfavorable entre el riesgo asignado en los Puntos 2, 3, 4 y 5.
+A cada nivel de Riesgo le corresponde una Etiqueta, como se indica en la Tabla 5. En la Figura 3 se muestran las tres etiquetas. La etiqueta seleccionada debe ser colocada en un sitio claramente visible a la entrada principal de la Edificación. Si el edificio tiene varias entradas, debe colocarse una Etiqueta en cada una de las entradas.
+El responsable y los residentes de la edificación deben ser informados que esta inspección no garantiza la seguridad de la misma ante eventos futuros adversos. Pueden existir situaciones no previstas que se escapan al alcance de esta inspección. El responsable de la edificación y sus residentes deben gestionar los estudios adicionales y reparaciones requeridas, y tener presente que las condiciones de estabilidad de la edificación y de su entorno pueden cambiar y en dicho caso deberán tramitar una nueva evaluación a las autoridades competentes.
+En caso de haberse colocado una Etiqueta Amarilla o Roja, la edificación debe pasar al segundo nivel de evaluación, o inspección detallada, a fin de decidir si puede ser reparada o reforzada o debe ser demolida.
+ACCIONES RECOMENDADAS
+Marque las acciones recomendadas en caso de que considere que sea necesario. Si desea agregar otras recomendaciones puede hacerlo en la sección de observaciones en la segunda página de la Planilla.
+Para Finalizar:
+Al inicio de la primera página de la Planilla indique la hora de terminación de la inspección.
+En la segunda página de la Planilla puede agregar las observaciones adicionales o explicaciones o hacer los dibujos o esquemas que considere necesarios.
+Coloque su firma al final de la Planilla, siguiendo el mismo orden en que aparecen los nombres en el Punto 1 (INFORMACIÓN GENERAL).
+EJEMPLO DE APLICACIÓN
+A continuación, se presenta un ejemplo de aplicación de la metodología descrita en el edificio Hotel Macuto Sheraton que sufrió daños estructurales importantes durante el sismo de Caracas de 1967 (MOP, 1978).
+Figura 24. Hotel Macuto Sheraton, Caraballeda, Sismo de Caracas de 1967 (NISEE, 2021).
+En la Figura 24 se muestra una vista general del edificio, tomada pocos días después del sismo de 1967.
+En la Figura 25 se muestra el sistema estructural de concreto armado el cual estaba constituido por muros en los niveles superiores del edificio, que no continuaban hasta los niveles inferiores, y columnas en los tres niveles más bajos. Los daños estructurales se concentraron en las columnas y vigas de los niveles inferiores.
+Figura 25. Esquema Estructural del Hotel Macuto Sheraton, mostrando los muros de concreto armada en los niveles superiores y las columnas en los niveles inferiores
+(Svojsik de Beek, 1980).
+A continuación, se presenta la información colocada en la Planilla (Figura 2), siguiendo el mismo orden y numeración establecida en la misma.
+ENCABEZADO
+La Figura 26 muestra la primera línea de datos de la planilla. Se ha supuesto que esta inspección se efectuó tres días después de ocurrido el evento sísmico.
+EVALUACIÓN RÁPIDA DE DAÑOS EN EDIFICACIONES
+Planilla N
+Tipo de evento y fecha
+Fecha de la Inspección
+Hora
+Inicio
+8:30 a.m.
+0001
+Sismo
+01/08/1967
+Fin
+11:00 a.m.
+Figura 26. Información en el Encabezado de la Planilla.
+INFORMACIÓN GENERAL
+La Figura 27 muestra la información general del Hotel Macuto Sheraton. La ubicación es en la población de
+Caraballeda, en lo que antes era el Estado Vargas, ahora Estado La Guaira.
+1.INFORMACIÓN GENERAL
+Inspectores
+Localización
+Nombre y Apellido
+Cédula de
+Identidad
+Estado
+Vargas
+Ciudad
+Caraballeda
+Juan Pérez
+2.345.678
+Municipio
+La Guaira
+Sector/Call
+Caribe
+María García
+3.456.789
+Coordenadas
+Latitud
+10,0155
+Longitud
+-66,8410
+Datos Generales de la Edificación
+Uso predominante de la Edificación
+Nombre/N
+Hotel Macuto Sherato
+Vivienda
+Comercio/Oficina
+Gubernamental
+Nº de Persona
+Nº de Piso
+10
+Educativo
+Médico /Asistencial
+Seguridad
+Nº Semisótano
+Nº Sótanos
+Industrial
+Cultural/Recreativo
+Religioso
+Año de construcció
+1955
+Otros (Especifique)
+Material predominante de la Estructura
+Concreto
+Acero
+Mampostería formal
+Mampostería informal
+Otro :
+Figura 27. Información General del Hotel Macuto Sheraton.
+INSPECCIÓN EXTERNA:
+Las dos fotografías superiores de la Figura 28 destacan la cercanía del Hotel al Edificio Mansión Charaima, que sufrió el desplome de los pisos superiores, y a una casa de tres niveles que tuvo asentamiento y rotación en las fundaciones. En las
+fotografías inferiores se destacan la licuación del terreno a la izquierda y el desplazamiento permanente de los techos a la derecha, ubicados en la cercanía del hotel. El fenómeno de licuación estuvo acompañado de grietas considerables en la línea costera, piscina, muelle, pavimento y alrededores.
+Figura 28. Evidencias del riesgo externo en el Hotel Macuto Sheraton. (NISEE, 2021).
+La Figura 29 presenta los resultados de la inspección externa y la información colocada en la planilla. No hay colapso de la estructura, pero el riesgo se cataloga de Medio, dada la extensión de los daños. Se considera que no hay peligro por edificios aledaños, por lo que el riesgo se cataloga como Bajo, debido a que ocurre a cierta distancia del Hotel. El peligro
+geológico se considera Moderado al cual le corresponde Riesgo Medio.
+El Riesgo Externo queda calificada como B. Medio, tomando en consideración que b=2 y c=0.
+2.INSPECCIÓN EXTERNA (calificar sin ingresar a la edificación)
+Aspectos revisados
+a.Bajo
+b.Medio
+c.Alto
+Colapso de la estructura
+No
+No
+X
+Posible,Parcialo
+Total
+Peligro por edificios aledaños
+No
+X
+Moderado
+Elevado
+Peligro geológico o geotécnico
+No
+Moderado
+X
+Elevado
+Asentamiento del edificio
+No
+X
+Hasta 20 cm
+˃ 20 cm
+Inclinación del edificio
+No
+X
+Hasta 2cm/60cm
+Mayor que 2cm/60cm
+Riesgo Externo
+A. Bajo (Todos a)
+B. Medio (b≥1 y c=0)
+X
+C. Alto (c≥1)
+Si el Riesgo Externo es catalogado como C. Alto, no continúe con la inspección interna, vaya al punto 6 y coloque
+Etiqueta roja.
+Figura 29. Resultado de la Inspección Externa del Hotel macuto Sheraton.
+IDENTIFICACIÓN DEL PISO CRÍTICO Y ELEMENTOS ESTRUCTURALES PRINCIPALES CON DAÑO SEVERO/COMPLETO
+La edificación principal está compuesta por tres módulos independientes y vinculados a través de dos juntas de construcción. La planta es de forma rectangular en la base de dimensiones 104 m x 33 m. Posee 11 pisos de los cuales los tres niveles inferiores, denominados de abajo hacia arriba como Nivel Playa (Semisótano), Lobby y Mezzanina, presentan los mayores daños estructurales. Tiene una configuración  estructural  de  concreto  armado  mixta,
+aporticada en toda la edificación, pero con muros desde los pisos 5 al 9 más el nivel de servicio. Las principales columnas de la Mezzanina son circulares, con un diámetro de 1,10 m. El módulo intermedio (Central) fue el que más afectación presentó. Se seleccionó al Nivel Mezzanina del Módulo Central como el Piso Crítico para la evaluación de los daños en el edificio.
+La Figura 30 muestra los daños en varias columnas circulares de la Mezzanina del Módulo Central.
+Figura 30. Daños en las columnas del piso crítico del Hotel Macuto Sheraton (NISEE, 2021).
+La Figura 31 presenta una planta del Módulo Central en el Nivel Mezzanina, indicando los daños observados en las columnas. Al menos el 55% de las vigas en Mezzanina presentaban grietas visibles, en especial entre los ejes B-C y entre A–B y C-D. También se observó pérdida de recubrimiento y agrietamiento de paredes en los niveles inferiores, es especial en la tabiquería de ascensores y
+adyacencias, así como el colapso del cielo raso (techo falso) en el Lobby, cocina y Nivel Playa. Las escaleras mostraron grietas significativas en los primeros niveles, mas no se vieron comprometidas en su estabilidad. Al momento del terremoto había 1.200 personas en el Hotel, de las cuales fallecieron 2 por el colapso de elementos no estructurales.
+Figura 31. Esquema de la planta del piso crítico y número de columnas con daño, en el Módulo Central del Hotel Macuto Sheraton. Modificada de Hanson y Degenkolb, 1975.
+La Figura 32 muestra los resultados del análisis del piso crítico y de la identificación de las columnas con daño estructural Severo/Completo. Se identificaron N=14 columnas en estas condiciones, por lo que al tener N1 le
+corresponde la calificación de Riesgo C. Alto. De acuerdo a lo indicado en la Planilla, la inspección debe culminar y se debe ir al Punto 6.
+3. IDENTIFICACIÓN DEL PISO CRÍTICO Y ELEMENTOS ESTRUCTURALES PRINCIPALES CON DAÑO SEVERO/COMPLETO
+Pisos Inspeccionados
+Todos
+Piso Crítico
+Mezzanina o Piso 3
+Accesoamiembrosestructurales principales
+Todos
+X
+Casi todos
+Pocos
+Ninguno
+Nº de elementos daño Severo/Completo (N)
+Columna/Unión
+14
+Muro (Conc.)
+Muro (Mampost.)
+Viga, arriost.
+RiesgoEstructuralpor Severo/Completo
+No hay (N=0) continuar inspección
+C. Alto (N≥1)
+X
+Si el Riesgo Estructural es catalogado como C. Alto, no continúe con la inspección interna, vaya al punto 6 y coloque Etiqueta roja.
+Figura 32. Resultado de la contabilizar el número de elementos estructurales principales con daño Severo/Completo en el piso crítico del Hotel Macuto Sheraton.
+INSPECCIÓNDEELEMENTOS ESTRUCTURALES PRINCIPALES CON DAÑO MODERADO EN EL PISO CRÍTICO
+No se requiere esta inspección y se debe proseguir directamente al Punto 6.
+INSPECCIÓN DE OTROS ELEMENTOS ESTRUCTURALES Y COMPONENTES NO ESTRUCTURALES
+No se requiere esta inspección y se debe proseguir directamente al Punto 6.
+RIESGOASOCIADOALDAÑOY RECOMENDACIONES DE ACCESO
+De acuerdo a los resultados del Punto 3, se otorga la calificación final de C. Riesgo Alto, el cual corresponde a Acceso no Permitido, y se coloca una Etiqueta Roja. El llenado de la Planilla se presenta en la Figura 33. La Etiqueta asignada al Hotel Macuto Sheraton se presenta en la Figura 34.
+6. RIESGO ASOCIADO AL DAÑO Y RECOMENDACIÓN DE ACCESO (tomar el Riesgo
+más desfavorable entre los Puntos 2, 3, 4 y 5)
+A.Bajo
+B.Medio
+C.Alto
+Acceso permitido
+Etiqueta verde
+Acceso restringido Etiqueta amarilla
+Acceso no permitido Etiqueta roja
+X
+Figura 33. Resultado del Riesgo asociado al daño y recomendación de acceso.
+Figura 34. Etiqueta asignada al Hotel Macuto Sheraton.
+ACCIONES RECOMENDADAS
+Las acciones recomendadas para el Hotel Macuto Sheraton se presentan en la Figura 35.
+7. ACCIONES RECOMENDADAS
+Inspección Detallada
+Estructura
+X
+Geología o Geotecnia
+Instalaciones
+X
+Medidas de Prevención
+Acordonar
+X
+Cerrar calles
+X
+Apuntalar
+Desconectar gas
+X
+Desconectar electricidad
+X
+Otra(en
+observaciones)
+Figura 35. Resultado de las acciones recomendadas para el Hotel Macuto Sheraton.
+AGRADECIMIENTOS
+Por su invalorable colaboración en las mesas de trabajo del Comité de Evaluación: Ing. Jorge González e Ing. William Ascanio
+REFERENCIAS
+AIS, 2002. Guía Técnica para Inspección de Edificaciones después de un Sismo. Manual de Campo. Asociación Colombiana de Ingeniería Sísmica. Alcaldía Mayor de Bogotá.
+AISC, 2020. Design of Seismic-Resistant Steel Building Structures. https://www.aisc.org/education/university-programs/ta-teaching- the-principles-of-seismic-resistant-design-of-steel-building- structures/’
+ATC, 2004, Field Manual: Safety Evaluation of Buildings after Windstorms and Floods, ATC-45 Report, Applied Technology Council, Redwood City, California.
+ATC, 2005, Field Manual: Procedures for Postearthquake Safety Evaluation of Buildings, Second Edition, ATC-20-1 Report, Applied Technology Council, Redwood City, California.
+BRI, 2002. Guideline for Damage Survey Methods of Earthquake Disaster Related with Buildings and Houses. Building Research Institute, Japan.
+Buyers Ask, 2019. Causes of Houses Settling: When Serious And WhatToLookFor.[Enlínea].Available: https://buyersask.com/structural/foundation/house-settlement- serious-look/. [Último acceso: Noviembre 2019].
+CENAPRED, 2014. Metodología para la Evaluación de la Seguridad Estructural de Edificios. Coordinación Nacional de Protección Civil, México.
+Coronel D.G., González J., Páez V., Rodríguez M. y Pérez R., 2019. Evaluación de la Seguridad de Estructuras Después de un Terremoto en Venezuela: Propuesta Adaptando la Experiencia de Japón. Presentación en el Foro de Gestión de Riesgos de Desastres 2019, Quito, Ecuador, 28 de noviembre de 2019.
+González J., Páez V., Rojas R. y Ascanio W., 2018. Guía de Evaluación Post-Sísmica de Edificios de Acero (Versión Preliminar), FUNVISIS, Caracas.
+Hanson R., Degenkolb H., 1975. The Venezuela Earthquake- July 29, 1967. Disponible en NISEE. Berkeley.edu.
+Hurtado E., 2013. Fichas de Lesiones Típicas de Daños por Terremotos en Inmuebles para uso con Ficha de Inspección Rápida desarrollada por la Dirección de Arquitectura. Sub Departamento de Ingeniería y Construcción – DEPU – DA – MOP. Chile.
+Ireland M., S. Pampanin y D. Bull, 2006. Concept and implementation of a selective weakening approach for the seismic retrofit of RC buildings. https://www.researchgate.net/publication/29486868_Concept_an d_implementation_of_a_selective_weakening_approach_for_the_ seismic_retrofit_of_RC_buildings. [Último acceso: Enero 2021].
+Jaimes Miguel A., 2015. Riesgos Estructurales. [En línea]. Available: http://www.proteccioncivilasesorias.com/index.php/adobe/que- son-los-riesgos-estructurales. [Último acceso: Enero 2021].
+Kaminosono T., Kumazawa F., Nakano Y., 2002. Manual de Inspección Rápida de Edificios de Concreto Armado dañados por Terremotos. Nota Técnica del Instituto Nacional de Gestión de Tierra e Infraestructura, N° 40.
+Li, J.; Wang, Y.; Lu, Z.; Li, J. Experimental Study and Numerical Simulation of a Laminated Reinforced Concrete Shear Wall with a Vertical   Seam.   Appl.   Sci.   2017,   7,   629.
+https://doi.org/10.3390/app7060629
+López O. A., Coronel G., Ascanio W., Rojas R., Páez V., Olbrich F., Rengel J. G. y González J., 2014. Índices de Priorización de Edificios para la Gestión del Riesgo Sísmico. Informe Técnico FUNVISIS, FUN-002, 2014.
+Marder K., Elwood K., Motter C., Clifton Ch., 2020. Post-earthquake assessment of moderately damaged reinforced concrete plastic hinges. Earthquake Spectra Vol. 36(1) 299–321.
+Martin J. A., 2021. Tipped Residence Due to Differential Settling, Caracas, Venezuela, 19676. John A. Martin & Associates [En línea]. Available: http://www.johnmartin.com/earthquakes/eqshow/647001_07.ht
+m. [Último acceso: Noviembre 2019].
+Medina, F., Yanev, P. y Yanev, A., 2010. El Terremoto de Magnitud 8,8 Costa Afuera de la Región de Maule, Chile del 27 de Febrero de 2010. Informe el Banco Mundial, Abril 2010.
+MIDUVI, 2016. Guía: Inspección y evaluación rápida de estructuras post-evento sísmico. Ministerio de Desarrollo Urbano y Vivienda (MIDUVI), Ecuador, Junio 2016. [En línea]. Available: https://www.preventionweb.net/files/52771_guiainpeccinposteve nto.pdf. [Último acceso: Septiembre 2019].
+MOP, 1978. Segunda Fase del Estudio del Sismo ocurrido en Caracas el 29 de julio de 1967, Vol. A, Comisión Presidencial para el Estudio del Sismo, Ministerio de Obras Públicas. Caracas.
+MOP, 2017. Ficha de Evaluación de Daños para Inspección Rápida de Edificios Públicos. Versión 3. Unidad de Ingeniería y Construcción, Departamento de Edificación - División Edificación Pública. Dirección de Arquitectura | MOP, Chile.
+NISEE, 2021. National Information Service for Earthquake Engineering, University of California, Berkeley. https://nisee.berkeley.edu/elibrary/.[Último acceso: Enero 2021].
+Pérez R. y M. Rodríguez, 2018. Propuesta de un procedimiento de Evaluación Rápida de la Seguridad de Edificaciones de Concreto Reforzado después de un Terremoto. TEG dirigido por el Prof. Gustavo Coronel. Facultad de Ingeniería, Universidad Central de Venezuela.
+Simsir, C. C., Ekwueme C., Hart G. C., Dumortier A. (2012). Earthquake Damage Assessment of Reinforced Concrete Hotel Buildings in Hawaii. 15WCEE Lisboa.
+SVOJSIK DE BEEK, V. M. (1980). Comportamiento sísmico del Macuto Sheraton durante el Terremoto de Caracas de 1967. Boletín Técnico IMME, Nº 66, pp. 3-48. Caracas.
+Urich B., Alfredo y Oscar A. López, 2018. Estimación de Espectros luego de un Sismo con Base en los Daños Observados en Edificios.
+XXI Congreso Nacional de Ingeniería Estructural Campeche, Campeche, 2018. Sociedad Mejicana de Ingeniería Estructural.
+Tani, M y T. Sato, 2017. Evaluación Rápida de Riesgos en Edificios Afectados por Terremotos. Building Research Institute BRI, Tokyo..
+
+...[total chars: 52552]...
+

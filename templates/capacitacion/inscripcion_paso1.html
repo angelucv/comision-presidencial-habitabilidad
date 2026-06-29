@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Inscripción{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-7">
+    <h1 class="h4 mb-1">{{ titulo }}</h1>
+    {% if qr_mode and sede %}
+      <p class="text-muted">Sede: <strong>{{ sede.nombre }}</strong> — elija la fecha y hora disponibles.</p>
+    {% else %}
+      <p class="text-muted">Paso 1 — Elija el lugar y la sesión de inducción.</p>
+    {% endif %}
+
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <form method="post" novalidate>
+          {% csrf_token %}
+          {{ form|crispy }}
+          <div class="d-flex gap-2 mt-3">
+            <button type="submit" class="btn btn-primary">Continuar</button>
+            <a href="{% url 'core:home' %}" class="btn btn-link">Cancelar</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const sede = document.getElementById("id_sede");
+  if (!sede || sede.type === "hidden") return;
+  sede.addEventListener("change", function () {
+    if (sede.value) this.form.submit();
+  });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+  <div class="col-lg-3 d-none d-lg-block">
+    {% include "capacitacion/panel/_sidebar.html" %}
+  </div>
+  <div class="col-lg-9">
+    <div class="d-flex d-lg-none mb-3">
+      <a class="btn btn-outline-primary btn-sm" href="{% url 'capacitacion:panel_inicio' %}">Panel</a>
+      <a class="btn btn-outline-primary btn-sm ms-1" href="{% url 'capacitacion:panel_importar' %}">Importar</a>
+      <a class="btn btn-outline-primary btn-sm ms-1" href="{% url 'capacitacion:panel_sedes' %}">Sedes</a>
+    </div>
+    {% block panel_content %}{% endblock %}
+  </div>
+</div>
+{% endblock %}

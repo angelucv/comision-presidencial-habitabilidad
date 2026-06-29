@@ -1,0 +1,12 @@
+<nav class="list-group shadow-sm mb-4">
+  <div class="list-group-item text-white fw-semibold" style="background:#00247D;">
+    <span class="d-block small opacity-75" style="color:#FFCC00; letter-spacing:2px;">★ ★ ★ ★ ★ ★ ★ ★</span>
+    Panel coordinador
+  </div>
+  <a href="{% url 'capacitacion:panel_inicio' %}" class="list-group-item list-group-item-action">Inicio</a>
+  <a href="{% url 'capacitacion:panel_sedes' %}" class="list-group-item list-group-item-action">Sedes y QR</a>
+  <a href="{% url 'capacitacion:panel_sesiones' %}" class="list-group-item list-group-item-action">Sesiones</a>
+  <a href="{% url 'capacitacion:panel_importar' %}" class="list-group-item list-group-item-action">Importar Excel</a>
+  <a href="{% url 'capacitacion:panel_plantilla_excel' %}" class="list-group-item list-group-item-action">↓ Plantilla Excel</a>
+  <a href="{% url 'admin:index' %}" class="list-group-item list-group-item-action">Admin avanzado</a>
+</nav>

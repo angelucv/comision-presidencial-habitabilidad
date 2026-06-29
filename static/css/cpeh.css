@@ -1,0 +1,207 @@
+/* CPEH — Identidad visual · Bandera de Venezuela
+   Amarillo #FFCC00 · Azul #00247D · Rojo #CF142B · 8 estrellas en franja azul */
+
+:root {
+  --ve-amarillo: #ffcc00;
+  --ve-azul: #00247d;
+  --ve-azul-oscuro: #001a5c;
+  --ve-rojo: #cf142b;
+  --ve-rojo-oscuro: #a81024;
+
+  --cpeh-primary: var(--ve-azul);
+  --cpeh-primary-dark: var(--ve-azul-oscuro);
+  --cpeh-accent: var(--ve-amarillo);
+  --cpeh-danger-btn: var(--ve-rojo);
+
+  --cpeh-success: #2d6a4f;
+  --cpeh-warning: #e9a319;
+  --cpeh-danger: #9b2226;
+  --cpeh-surface: #f4f6f9;
+  --cpeh-border: #dde3ec;
+}
+
+body {
+  background-color: var(--cpeh-surface);
+}
+
+/* Franja tricolor superior (bandera) */
+.ve-tricolor-bar {
+  display: flex;
+  height: 5px;
+  width: 100%;
+}
+
+.ve-tricolor-bar span {
+  flex: 1;
+}
+
+.ve-tricolor-bar .ve-amarillo { background: var(--ve-amarillo); }
+.ve-tricolor-bar .ve-azul { background: var(--ve-azul); }
+.ve-tricolor-bar .ve-rojo { background: var(--ve-rojo); }
+
+.navbar-cpeh {
+  background: linear-gradient(90deg, var(--ve-azul-oscuro) 0%, var(--ve-azul) 55%, #003080 100%) !important;
+  border-bottom: 3px solid var(--ve-amarillo);
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
+}
+
+.navbar-brand {
+  margin-right: 0.5rem;
+}
+
+.navbar-brand img {
+  height: 52px;
+  width: 52px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(255, 204, 0, 0.45);
+}
+
+.brand-tagline {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  max-width: 42rem;
+}
+
+.brand-title {
+  font-weight: 600;
+  font-size: clamp(0.78rem, 2.2vw, 1.05rem);
+  color: #fff;
+}
+
+.brand-tagline small {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: clamp(0.62rem, 1.8vw, 0.72rem);
+  font-weight: 400;
+  color: var(--ve-amarillo);
+  opacity: 0.95;
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    max-width: 58%;
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar-brand {
+    gap: 0.65rem !important;
+  }
+  .navbar-brand img {
+    height: 42px;
+    width: 42px;
+  }
+}
+
+.navbar-cpeh .nav-link {
+  font-weight: 500;
+  padding-left: 0.85rem !important;
+  padding-right: 0.85rem !important;
+}
+
+.navbar-cpeh .nav-link:hover {
+  color: var(--ve-amarillo) !important;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 204, 0, 0.5);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 204, 0, 0.35);
+}
+
+.hero-card {
+  border: none;
+  overflow: hidden;
+}
+
+.hero-card .ve-hero-band {
+  display: flex;
+  height: 6px;
+}
+
+.hero-card .ve-hero-band span {
+  flex: 1;
+}
+
+.hero-card .ve-hero-stars {
+  background: var(--ve-azul);
+  color: #fff;
+  text-align: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.25rem;
+  padding: 0.35rem 0;
+  opacity: 0.95;
+}
+
+.semaforo-legend span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.semaforo-verde { background: var(--cpeh-success); }
+.semaforo-amarillo { background: var(--cpeh-warning); }
+.semaforo-rojo { background: var(--cpeh-danger); }
+
+footer.cpeh-footer {
+  background: #fff;
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(
+    90deg,
+    var(--ve-amarillo) 33%,
+    var(--ve-azul) 33% 66%,
+    var(--ve-rojo) 66%
+  ) 1;
+}
+
+footer .ve-footer-stars {
+  color: var(--ve-azul);
+  letter-spacing: 0.2rem;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.btn-primary {
+  background-color: var(--ve-azul);
+  border-color: var(--ve-azul);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--ve-azul-oscuro);
+  border-color: var(--ve-azul-oscuro);
+}
+
+.btn-outline-ve {
+  color: var(--ve-azul);
+  border-color: var(--ve-azul);
+}
+
+.btn-outline-ve:hover {
+  background: var(--ve-azul);
+  border-color: var(--ve-azul);
+  color: #fff;
+}
+
+.card {
+  border-radius: 0.5rem;
+}
+
+.list-group-item.active,
+.bg-primary {
+  background-color: var(--ve-azul) !important;
+  border-color: var(--ve-azul) !important;
+}
+
+.panel-sidebar .list-group-item.bg-primary {
+  background: var(--ve-azul) !important;
+}

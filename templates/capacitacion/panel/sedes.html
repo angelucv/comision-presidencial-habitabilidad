@@ -1,0 +1,45 @@
+{% extends "capacitacion/panel/base_panel.html" %}
+
+{% block title %}Sedes y QR{% endblock %}
+
+{% block panel_content %}
+<h1 class="h4 mb-3">Sedes e inscripción por QR</h1>
+<p class="text-muted">
+  Imprima el código QR en carteles en la entrada de cada universidad o auditorio.
+  Al escanearlo, el participante llega directo a la inscripción de esa sede (sin buscar en listas).
+</p>
+
+<div class="table-responsive card shadow-sm border-0">
+  <table class="table mb-0">
+    <thead>
+      <tr>
+        <th>Sede</th>
+        <th>Enlace</th>
+        <th>QR</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for sede in sedes %}
+      <tr>
+        <td>
+          <strong>{{ sede.nombre }}</strong>
+          {% if sede.municipio %}<br><span class="small text-muted">{{ sede.municipio }}, {{ sede.estado }}</span>{% endif %}
+        </td>
+        <td class="small">
+          <a href="{% url 'capacitacion_public:por_sede' sede.slug %}" target="_blank">
+            /inscripcion/sede/{{ sede.slug }}/
+          </a>
+        </td>
+        <td>
+          <a class="btn btn-sm btn-outline-primary" href="{% url 'capacitacion:panel_sede_qr' sede.pk %}">
+            Descargar PNG
+          </a>
+        </td>
+      </tr>
+      {% empty %}
+      <tr><td colspan="3" class="p-4 text-muted">No hay sedes. Use <a href="{% url 'capacitacion:panel_importar' %}">Importar Excel</a>.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

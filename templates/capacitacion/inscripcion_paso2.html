@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Datos personales{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-8">
+    <h1 class="h4 mb-3">Inscripción — datos personales</h1>
+
+    <div class="alert alert-light border mb-4">
+      <dl class="row mb-0 small">
+        <dt class="col-sm-4">Lugar de inducción</dt>
+        <dd class="col-sm-8">{{ sesion.sede.nombre }}</dd>
+        <dt class="col-sm-4">Fecha</dt>
+        <dd class="col-sm-8">{{ sesion.fecha|date:"d/m/Y" }}</dd>
+        <dt class="col-sm-4">Hora</dt>
+        <dd class="col-sm-8">{{ sesion.hora|time:"H:i" }}</dd>
+        <dt class="col-sm-4">Cupos disponibles</dt>
+        <dd class="col-sm-8">{{ sesion.cupos_disponibles }}</dd>
+      </dl>
+    </div>
+
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <form method="post" novalidate>
+          {% csrf_token %}
+          {{ form|crispy }}
+          <div class="d-flex gap-2 mt-3">
+            <button type="submit" class="btn btn-primary">Enviar inscripción</button>
+            <a href="{% url 'capacitacion_public:paso1' %}" class="btn btn-link">← Cambiar sesión</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+Estimado/a {{ participante.nombre_completo }},
+
+Su inscripción a la inducción de inspectores fue registrada correctamente.
+
+Código: {{ inscripcion.codigo }}
+Sede: {{ sede.nombre }}
+Fecha: {{ sesion.fecha|date:"d/m/Y" }}
+Hora: {{ sesion.hora|time:"H:i" }}
+
+Presente su cédula ({{ participante.cedula }}) el día de la actividad.
+
+{{ comision }}
+Evaluación de habitabilidad — post-terremoto {{ evento_fecha }}

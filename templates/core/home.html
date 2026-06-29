@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-8">
+    <div class="card shadow-sm border-0 hero-card">
+      <div class="ve-hero-band" aria-hidden="true">
+        <span style="background:#FFCC00"></span>
+        <span style="background:#00247D"></span>
+        <span style="background:#CF142B"></span>
+      </div>
+      <div class="ve-hero-stars" aria-hidden="true">★ ★ ★ ★ ★ ★ ★ ★</div>
+      <div class="card-body p-4 p-md-5">
+        <p class="text-uppercase text-muted small mb-2">Post-terremoto · {{ CPEH_EVENTO_SISMO_FECHA }}</p>
+        <h1 class="h3 mb-3">Sistema de Capacitación e Inspección</h1>
+        <p class="lead">Evaluación Rápida de Daños en Edificaciones (ERD)</p>
+        <p class="text-muted">          Registro de inducciones para inspectores y, en fases posteriores, captura digital de inspecciones
+          con semáforo verde / amarillo / rojo según metodología ANIH.
+        </p>
+        <div class="d-flex flex-wrap gap-2 mt-4">
+          <a class="btn btn-primary btn-lg" href="{% url 'capacitacion_public:paso1' %}">Inscribirse a inducción</a>
+          <a class="btn btn-outline-ve" href="{% url 'cuentas:login' %}">Iniciar sesión</a>
+        </div>
+        <p class="small text-muted mt-4 mb-0">
+          Los datos personales se usan únicamente para la gestión de capacitación e inspecciones
+          en el marco de la comisión presidencial.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<body style="font-family: Arial, sans-serif; color: #00247D; max-width: 560px;">
+  <div style="height:4px;background:linear-gradient(90deg,#FFCC00 33%,#00247D 33% 66%,#CF142B 66%);"></div>
+  <div style="background: #00247D; color: #fff; padding: 12px 20px;">
+    <div style="font-size:11px; letter-spacing:3px; color:#FFCC00;">★ ★ ★ ★ ★ ★ ★ ★</div>
+    <strong>CPEH</strong> — Capacitación de inspectores
+  </div>
+  <div style="padding: 20px; border: 1px solid #e8ecf0;">
+    <p>Estimado/a <strong>{{ participante.nombre_completo }}</strong>,</p>
+    <p>Su inscripción fue registrada correctamente.</p>
+    <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+      <tr><td style="padding:6px 0; color:#666;">Código</td><td><strong>{{ inscripcion.codigo }}</strong></td></tr>
+      <tr><td style="padding:6px 0; color:#666;">Sede</td><td>{{ sede.nombre }}</td></tr>
+      <tr><td style="padding:6px 0; color:#666;">Fecha</td><td>{{ sesion.fecha|date:"d/m/Y" }}</td></tr>
+      <tr><td style="padding:6px 0; color:#666;">Hora</td><td>{{ sesion.hora|time:"H:i" }}</td></tr>
+    </table>
+    <p style="font-size: 14px; color: #666;">Presente su cédula <strong>{{ participante.cedula }}</strong> el día de la inducción.</p>
+  </div>
+  <p style="font-size: 12px; color: #999; padding: 0 20px;">{{ comision }}</p>
+</body>
+</html>
