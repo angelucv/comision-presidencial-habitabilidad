@@ -1,12 +1,13 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Mapa de edificaciones{% endblock %}
 
 {% block extra_head %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="{% static 'vendor/leaflet/leaflet.css' %}">
 <style>
-  #mapa-cpeh { height: 520px; min-height: 320px; z-index: 0; }
-  #mapa-cpeh.leaflet-container { background: #e8ecf0; }
+  #mapa-cpeh { height: 520px; min-height: 320px; width: 100%; z-index: 0; }
+  #mapa-cpeh.leaflet-container { background: #dde4ea; }
 </style>
 {% endblock %}
 
@@ -28,7 +29,8 @@
   <div class="col-6 col-md-2"><div class="card text-center p-2"><div class="fw-bold text-danger">{{ stats.rojos }}</div><div class="small">Rojo</div></div></div>
 </div>
 
-<div id="mapa-cpeh" class="rounded border shadow-sm mb-3"></div>
+<div id="mapa-cpeh" class="rounded border shadow-sm mb-3" role="region" aria-label="Mapa de edificaciones"></div>
+<p id="mapa-error" class="text-danger small d-none">No se pudo cargar el mapa. Recargue la página o contacte al administrador.</p>
 
 <div class="small text-muted">
   <span class="d-inline-block me-3"><span class="semaforo-verde d-inline-block"></span> Habitable</span>
@@ -41,27 +43,31 @@
 {% endblock %}
 
 {% block extra_js %}
-<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="{% static 'vendor/leaflet/leaflet.js' %}"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const puntos = JSON.parse(document.getElementById("mapa-puntos-data").textContent);
-  const centroLat = {{ centro_lat }};
-  const centroLon = {{ centro_lon }};
-  const zoomInicial = {{ zoom }};
+  var errorEl = document.getElementById("mapa-error");
+  if (typeof L === "undefined") {
+    if (errorEl) errorEl.classList.remove("d-none");
+    return;
+  }
 
-  const map = L.map("mapa-cpeh", { scrollWheelZoom: true }).setView([centroLat, centroLon], zoomInicial);
+  var puntos = JSON.parse(document.getElementById("mapa-puntos-data").textContent);
+  var map = L.map("mapa-cpeh", { scrollWheelZoom: true }).setView([{{ centro_lat }}, {{ centro_lon }}], {{ zoom }});
 
+  {% verbatim %}
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    attribution: "&copy; OpenStreetMap"
   }).addTo(map);
+  {% endverbatim %}
 
-  const colores = { verde: "#198754", amarillo: "#ffc107", rojo: "#dc3545", pendiente: "#6c757d" };
-  const capaMarcadores = [];
+  var colores = { verde: "#198754", amarillo: "#ffc107", rojo: "#dc3545", pendiente: "#6c757d" };
+  var capaMarcadores = [];
 
   puntos.forEach(function (p) {
-    const color = colores[p.semaforo] || colores.pendiente;
-    const marker = L.circleMarker([p.lat, p.lon], {
+    var color = colores[p.semaforo] || colores.pendiente;
+    var marker = L.circleMarker([p.lat, p.lon], {
       radius: 10,
       fillColor: color,
       color: "#ffffff",
@@ -73,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "<br><small>" + p.direccion + ", " + p.municipio + "</small>" +
       "<br>Estado: " + p.estado_inspeccion +
       (p.semaforo !== "pendiente" ? "<br>Semáforo: " + p.semaforo : "") +
-      '<br><a href="' + p.url + '">Ver ficha</a>'
+      "<br><a href=\"" + p.url + "\">Ver ficha</a>"
     );
     capaMarcadores.push(marker);
   });
@@ -82,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     map.fitBounds(L.featureGroup(capaMarcadores).getBounds().pad(0.15));
   }
 
-  setTimeout(function () { map.invalidateSize(); }, 200);
+  setTimeout(function () { map.invalidateSize(); }, 250);
 });
 </script>
 {% endblock %}

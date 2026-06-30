@@ -71,13 +71,10 @@
       <p class="mb-1">{{ CPEH_NOMBRE_COMISION }}</p>
       <p class="mb-1">
         <a href="{% url 'core:comision' %}" class="text-muted">Información de la comisión</a>
-        · Terremoto {{ CPEH_EVENTO_SISMO_FECHA }} · Metodología ERD / ANIH
+        {% if CPEH_EMAIL_CAPACITACION %}
+          · <a href="mailto:{{ CPEH_EMAIL_CAPACITACION }}" class="text-muted">{{ CPEH_EMAIL_CAPACITACION }}</a>
+        {% endif %}
       </p>
-      {% if CPEH_EMAIL_CAPACITACION %}
-      <p class="mb-1">
-        <a href="mailto:{{ CPEH_EMAIL_CAPACITACION }}" class="text-muted">{{ CPEH_EMAIL_CAPACITACION }}</a>
-      </p>
-      {% endif %}
       <p class="mb-0 semaforo-legend">
         <span class="semaforo-verde"></span> Habitable
         <span class="semaforo-amarillo ms-2"></span> Acceso restringido
