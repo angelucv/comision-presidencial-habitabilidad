@@ -32,14 +32,17 @@ def mapa_edificios(request):
         "amarillos": Edificacion.objects.filter(semaforo=Edificacion.Semaforo.AMARILLO).count(),
         "verdes": Edificacion.objects.filter(semaforo=Edificacion.Semaforo.VERDE).count(),
     }
+    map_config = {
+        "centro_lat": MAPA_CENTRO_LAT,
+        "centro_lon": MAPA_CENTRO_LON,
+        "zoom": MAPA_ZOOM_INICIAL,
+    }
     return render(
         request,
         "reportes/mapa_edificios.html",
         {
             "puntos": puntos,
-            "centro_lat": MAPA_CENTRO_LAT,
-            "centro_lon": MAPA_CENTRO_LON,
-            "zoom": MAPA_ZOOM_INICIAL,
+            "map_config": map_config,
             "stats": stats,
         },
     )

@@ -40,6 +40,7 @@
 </div>
 
 {{ puntos|json_script:"mapa-puntos-data" }}
+{{ map_config|json_script:"mapa-config-data" }}
 {% endblock %}
 
 {% block extra_js %}
@@ -47,48 +48,58 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   var errorEl = document.getElementById("mapa-error");
-  if (typeof L === "undefined") {
-    if (errorEl) errorEl.classList.remove("d-none");
-    return;
-  }
+  try {
+    if (typeof L === "undefined") {
+      throw new Error("Leaflet no cargó");
+    }
 
-  var puntos = JSON.parse(document.getElementById("mapa-puntos-data").textContent);
-  var map = L.map("mapa-cpeh", { scrollWheelZoom: true }).setView([{{ centro_lat }}, {{ centro_lon }}], {{ zoom }});
-
-  {% verbatim %}
-  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution: "&copy; OpenStreetMap"
-  }).addTo(map);
-  {% endverbatim %}
-
-  var colores = { verde: "#198754", amarillo: "#ffc107", rojo: "#dc3545", pendiente: "#6c757d" };
-  var capaMarcadores = [];
-
-  puntos.forEach(function (p) {
-    var color = colores[p.semaforo] || colores.pendiente;
-    var marker = L.circleMarker([p.lat, p.lon], {
-      radius: 10,
-      fillColor: color,
-      color: "#ffffff",
-      weight: 2,
-      fillOpacity: 0.95
-    }).addTo(map);
-    marker.bindPopup(
-      "<strong>" + p.codigo + "</strong><br>" + p.nombre +
-      "<br><small>" + p.direccion + ", " + p.municipio + "</small>" +
-      "<br>Estado: " + p.estado_inspeccion +
-      (p.semaforo !== "pendiente" ? "<br>Semáforo: " + p.semaforo : "") +
-      "<br><a href=\"" + p.url + "\">Ver ficha</a>"
+    var puntos = JSON.parse(document.getElementById("mapa-puntos-data").textContent);
+    var cfg = JSON.parse(document.getElementById("mapa-config-data").textContent);
+    var map = L.map("mapa-cpeh", { scrollWheelZoom: true }).setView(
+      [cfg.centro_lat, cfg.centro_lon],
+      cfg.zoom
     );
-    capaMarcadores.push(marker);
-  });
 
-  if (capaMarcadores.length) {
-    map.fitBounds(L.featureGroup(capaMarcadores).getBounds().pad(0.15));
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
+      subdomains: "abcd",
+      maxZoom: 19,
+      attribution: "&copy; OpenStreetMap &copy; CARTO"
+    }).addTo(map);
+
+    var colores = { verde: "#198754", amarillo: "#ffc107", rojo: "#dc3545", pendiente: "#6c757d" };
+    var capaMarcadores = [];
+
+    puntos.forEach(function (p) {
+      var color = colores[p.semaforo] || colores.pendiente;
+      var marker = L.circleMarker([p.lat, p.lon], {
+        radius: 10,
+        fillColor: color,
+        color: "#ffffff",
+        weight: 2,
+        fillOpacity: 0.95
+      }).addTo(map);
+      marker.bindPopup(
+        "<strong>" + p.codigo + "</strong><br>" + p.nombre +
+        "<br><small>" + p.direccion + ", " + p.municipio + "</small>" +
+        "<br>Estado: " + p.estado_inspeccion +
+        (p.semaforo !== "pendiente" ? "<br>Semáforo: " + p.semaforo : "") +
+        "<br><a href=\"" + p.url + "\">Ver ficha</a>"
+      );
+      capaMarcadores.push(marker);
+    });
+
+    if (capaMarcadores.length) {
+      map.fitBounds(L.featureGroup(capaMarcadores).getBounds().pad(0.15));
+    }
+
+    setTimeout(function () { map.invalidateSize(); }, 250);
+  } catch (err) {
+    console.error("Mapa CPEH:", err);
+    if (errorEl) {
+      errorEl.textContent = "No se pudo cargar el mapa: " + err.message;
+      errorEl.classList.remove("d-none");
+    }
   }
-
-  setTimeout(function () { map.invalidateSize(); }, 250);
 });
 </script>
 {% endblock %}
