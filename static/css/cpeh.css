@@ -45,7 +45,7 @@ body {
   padding: 0.5rem 0;
 }
 
-/* Logo + título + menú en una sola fila en móvil */
+/* Logo + título + menú — evitar superposición en anchos intermedios */
 .navbar-cpeh-inner {
   display: flex;
   flex-wrap: wrap;
@@ -63,6 +63,7 @@ body {
   margin-right: 0;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  overflow: hidden;
 }
 
 .navbar-brand img {
@@ -80,6 +81,7 @@ body {
   line-height: 1.2;
   min-width: 0;
   flex: 1;
+  overflow: hidden;
 }
 
 .brand-title {
@@ -87,9 +89,9 @@ body {
   color: #fff;
 }
 
-.brand-title-full {
+.brand-title-full,
+.brand-title-medium {
   display: none;
-  font-size: clamp(0.85rem, 1.5vw, 1.05rem);
 }
 
 .brand-title-short {
@@ -113,15 +115,16 @@ body {
   line-height: 1.2;
 }
 
+/* Enlaces del menú: versión corta en pantallas medianas */
+.nav-text-full {
+  display: none;
+}
+
+.nav-text-short {
+  display: inline;
+}
+
 @media (min-width: 768px) {
-  .brand-title-full {
-    display: block;
-  }
-
-  .brand-title-short {
-    display: none;
-  }
-
   .brand-subtitle {
     font-size: 0.72rem;
   }
@@ -130,24 +133,85 @@ body {
     height: 52px;
     width: 52px;
   }
-
-  .navbar-cpeh .navbar-brand {
-    max-width: 70%;
-    gap: 0.85rem;
-  }
 }
 
-@media (min-width: 992px) {
+/* Menú hamburguesa hasta XL (1200px) — evita choque título vs enlaces */
+@media (min-width: 1200px) {
   .navbar-cpeh-inner {
     flex-wrap: nowrap;
   }
 
   .navbar-cpeh .navbar-brand {
-    max-width: 62%;
+    flex: 0 1 auto;
+    max-width: min(52%, 36rem);
+    gap: 0.85rem;
+  }
+
+  .navbar-cpeh .navbar-collapse {
+    flex: 0 0 auto;
+  }
+
+  .brand-title-short {
+    display: none;
+  }
+
+  .brand-title-medium {
+    display: block;
+    font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .navbar-nav-cpeh .nav-link {
+    padding-left: 0.55rem !important;
+    padding-right: 0.55rem !important;
+    font-size: 0.92rem;
+    white-space: nowrap;
   }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 1400px) {
+  .navbar-cpeh .navbar-brand {
+    max-width: min(58%, 42rem);
+  }
+
+  .brand-title-medium {
+    display: none;
+  }
+
+  .brand-title-full {
+    display: block;
+    font-size: clamp(0.9rem, 1vw, 1.05rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .brand-subtitle {
+    display: block;
+  }
+
+  .nav-text-full {
+    display: inline;
+  }
+
+  .nav-text-short {
+    display: none;
+  }
+
+  .navbar-nav-cpeh .nav-link {
+    padding-left: 0.85rem !important;
+    padding-right: 0.85rem !important;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1199px) {
   .navbar-cpeh .navbar-toggler {
     flex-shrink: 0;
     padding: 0.35rem 0.55rem;
@@ -163,6 +227,14 @@ body {
 
   .navbar-cpeh .nav-link {
     padding: 0.6rem 0 !important;
+  }
+
+  .nav-text-full {
+    display: inline;
+  }
+
+  .nav-text-short {
+    display: none;
   }
 }
 

@@ -15,12 +15,13 @@
     <span class="ve-azul"></span>
     <span class="ve-rojo"></span>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-cpeh">
-    <div class="container navbar-cpeh-inner">
+  <nav class="navbar navbar-expand-xl navbar-dark navbar-cpeh">
+    <div class="container-fluid container-xl navbar-cpeh-inner">
       <a class="navbar-brand" href="{% url 'core:home' %}">
         <img src="{% static 'img/logo-cpeh.svg' %}" alt="CPEH" width="48" height="48">
         <span class="brand-tagline">
           <span class="brand-title brand-title-full">{{ CPEH_NOMBRE_COMISION }} (CPEH)</span>
+          <span class="brand-title brand-title-medium">CPEH — Evaluación de Habitabilidad</span>
           <span class="brand-title brand-title-short">
             Comisión Presidencial<br>
             <span class="brand-accent">Evaluación de Habitabilidad (CPEH)</span>
@@ -33,10 +34,20 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMain">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="{% url 'core:comision' %}">La Comisión</a></li>
-          <li class="nav-item"><a class="nav-link" href="{% url 'core:como_funciona' %}">Cómo funciona</a></li>
-          <li class="nav-item"><a class="nav-link" href="{% url 'capacitacion_public:paso1' %}">Inscribirse</a></li>
+        <ul class="navbar-nav ms-auto navbar-nav-cpeh">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'core:comision' %}">
+              <span class="nav-text-full">La Comisión</span><span class="nav-text-short">Comisión</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'core:como_funciona' %}">
+              <span class="nav-text-full">Cómo funciona</span><span class="nav-text-short">Guía</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'capacitacion_public:paso1' %}">Inscribirse</a>
+          </li>
           {% if user.is_staff %}
           <li class="nav-item"><a class="nav-link" href="{% url 'capacitacion:panel_inicio' %}">Panel</a></li>
           {% elif user.is_authenticated %}
@@ -46,7 +57,9 @@
             {% if user.is_authenticated %}
               <a class="nav-link" href="{% url 'cuentas:logout' %}">Salir</a>
             {% else %}
-              <a class="nav-link" href="{% url 'cuentas:login' %}">Coordinadores</a>
+              <a class="nav-link" href="{% url 'cuentas:login' %}">
+                <span class="nav-text-full">Coordinadores</span><span class="nav-text-short">Entrar</span>
+              </a>
             {% endif %}
           </li>
         </ul>
