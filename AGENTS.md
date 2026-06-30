@@ -29,11 +29,21 @@ Django 5 · PostgreSQL · Bootstrap 5 · WeasyPrint · español (es-VE)
 | Ruta | Uso |
 |------|-----|
 | `/` | Inicio público |
+| `/comision/` | Información institucional |
+| `/como-funciona/` | Guía del sistema |
 | `/inscripcion/` | Inscripción sede → sesión |
 | `/inscripcion/sede/<slug>/` | QR universidad |
 | `/panel/` | Coordinador |
-| `/capacitacion/calendario/` | Sesiones en lote |
-| `/inspecciones/` | Wizard ERD (fase 4) |
+| `/reportes/mapa/` | Mapa edificaciones |
+| `/inspecciones/` | Portal inspector ERD |
+
+## Producción y sync
+
+- **URL:** https://cpeh-web.onrender.com
+- **Git:** https://github.com/angelucv/comision-presidencial-habitabilidad (`main`)
+- **Espejo Drive:** `MisProyectos-Espejo\D-CPEH` ↔ `clients\comision-presidencial-habitabilidad`
+- **Handoff:** `docs/ESTADO-PROYECTO-Y-SYNC.md`
+- **Aviso laptop:** `instrucciones-cursor/AVISO-PC-A-LAPTOP-CPEH-2026-06-29.md`
 
 ## Documento maestro
 
