@@ -1,5 +1,3 @@
-import json
-
 from django.shortcuts import render
 
 from apps.capacitacion.decorators import coordinador_required
@@ -38,7 +36,7 @@ def mapa_edificios(request):
         request,
         "reportes/mapa_edificios.html",
         {
-            "puntos_json": json.dumps(puntos),
+            "puntos": puntos,
             "centro_lat": MAPA_CENTRO_LAT,
             "centro_lon": MAPA_CENTRO_LON,
             "zoom": MAPA_ZOOM_INICIAL,

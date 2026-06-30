@@ -5,4 +5,5 @@ def cpeh(request):
     return {
         "CPEH_NOMBRE_COMISION": settings.CPEH_NOMBRE_COMISION,
         "CPEH_EVENTO_SISMO_FECHA": settings.CPEH_EVENTO_SISMO_FECHA,
+        "CPEH_EMAIL_CAPACITACION": settings.CPEH_EMAIL_CAPACITACION,
     }

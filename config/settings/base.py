@@ -136,11 +136,14 @@ EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", "")
 EMAIL_TIMEOUT = int(os.environ.get("EMAIL_TIMEOUT", "15"))
 BREVO_API_KEY = os.environ.get("BREVO_API_KEY", "").strip()
+CPEH_EMAIL_CAPACITACION = os.environ.get(
+    "CPEH_EMAIL_CAPACITACION", "capacitacion.cpeh@gmail.com"
+).strip()
 DEFAULT_FROM_EMAIL = os.environ.get(
-    "DEFAULT_FROM_EMAIL", "CPEH <noreply@example.com>"
+    "DEFAULT_FROM_EMAIL", f"CPEH <{CPEH_EMAIL_CAPACITACION}>"
 )
-if EMAIL_HOST_USER and DEFAULT_FROM_EMAIL.endswith("@example.com>"):
-    DEFAULT_FROM_EMAIL = f"CPEH <{EMAIL_HOST_USER}>"
+if not os.environ.get("EMAIL_HOST_USER", "").strip() and CPEH_EMAIL_CAPACITACION:
+    EMAIL_HOST_USER = CPEH_EMAIL_CAPACITACION
 
 CPEH_NOMBRE_COMISION = os.environ.get(
     "CPEH_NOMBRE_COMISION",
