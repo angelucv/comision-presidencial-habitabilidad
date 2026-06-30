@@ -35,6 +35,7 @@
       <div class="collapse navbar-collapse" id="navMain">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="{% url 'core:comision' %}">La Comisión</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'core:como_funciona' %}">Cómo funciona</a></li>
           <li class="nav-item"><a class="nav-link" href="{% url 'capacitacion_public:paso1' %}">Inscribirse</a></li>
           {% if user.is_staff %}
           <li class="nav-item"><a class="nav-link" href="{% url 'capacitacion:panel_inicio' %}">Panel</a></li>

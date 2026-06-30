@@ -376,6 +376,20 @@ footer .ve-footer-stars {
 .semaforo-dot.semaforo-verde { background: var(--cpeh-success); }
 .semaforo-dot.semaforo-amarillo { background: var(--cpeh-warning); }
 .semaforo-dot.semaforo-rojo { background: var(--cpeh-danger); }
+.semaforo-dot.semaforo-gris { background: #6c757d; }
+
+.sistema-paso-numero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--ve-azul);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
 
 .comision-pillar {
   background: var(--cpeh-surface);

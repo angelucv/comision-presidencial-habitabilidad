@@ -151,37 +151,13 @@
       </div>
       <div class="card-body">
         <p class="mb-3">
-          La plataforma apoya la operación de la comisión mediante:
+          La plataforma apoya la operación de la comisión: capacitación de inspectores,
+          inspecciones ERD, semáforo de habitabilidad y reportes geográficos.
         </p>
-        <div class="row g-3">
-          <div class="col-sm-6 col-lg-3">
-            <div class="comision-pillar">
-              <strong>Capacitación</strong>
-              <p class="small text-muted mb-0">Registro de inducciones (programadas o ya realizadas) en sedes universitarias.</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <div class="comision-pillar">
-              <strong>Inspección ERD</strong>
-              <p class="small text-muted mb-0">Planilla digital V.8 y reglas de evaluación rápida de daños.</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <div class="comision-pillar">
-              <strong>Semáforo</strong>
-              <p class="small text-muted mb-0">Etiquetas verde, amarilla y roja para decisiones de habitabilidad.</p>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-3">
-            <div class="comision-pillar">
-              <strong>Reportes</strong>
-              <p class="small text-muted mb-0">Trazabilidad y exportación para coordinación institucional.</p>
-            </div>
-          </div>
-        </div>
-        <div class="d-grid d-sm-flex gap-2 mt-4">
-          <a class="btn btn-primary" href="{% url 'capacitacion_public:paso1' %}">Inscribirse a inducción</a>
-          <a class="btn btn-outline-ve" href="{% url 'core:home' %}">Volver al inicio</a>
+        <div class="d-grid d-sm-flex gap-2">
+          <a class="btn btn-primary" href="{% url 'core:como_funciona' %}">Cómo funciona el sistema</a>
+          <a class="btn btn-outline-ve" href="{% url 'capacitacion_public:paso1' %}">Inscribirse a inducción</a>
+          <a class="btn btn-outline-secondary" href="{% url 'core:home' %}">Volver al inicio</a>
         </div>
       </div>
     </section>

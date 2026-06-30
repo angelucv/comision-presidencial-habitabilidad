@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% block title %}Cómo funciona{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-10">
+
+    <div class="comision-hero card shadow-sm border-0 mb-4">
+      <div class="ve-hero-band" aria-hidden="true">
+        <span style="background:#FFCC00"></span>
+        <span style="background:#00247D"></span>
+        <span style="background:#CF142B"></span>
+      </div>
+      <div class="card-body p-3 p-md-4">
+        <p class="hero-eyebrow text-uppercase text-muted small mb-2">Guía rápida</p>
+        <h1 class="hero-title mb-2">Cómo funciona el sistema</h1>
+        <p class="text-muted mb-0">
+          Plataforma de la {{ CPEH_NOMBRE_COMISION }} para capacitar inspectores,
+          registrar inspecciones ERD y visualizar el semáforo de habitabilidad
+          tras el evento del {{ CPEH_EVENTO_SISMO_FECHA }}.
+        </p>
+      </div>
+    </div>
+
+    <section class="card shadow-sm border-0 mb-4 comision-section">
+      <div class="card-header comision-section-header">
+        <h2 class="h5 mb-0">Roles en la plataforma</h2>
+      </div>
+      <div class="card-body">
+        <div class="row g-3">
+          {% for rol in roles %}
+          <div class="col-md-4">
+            <div class="comision-pillar h-100">
+              <strong>{{ rol.titulo }}</strong>
+              <p class="small text-muted">{{ rol.descripcion }}</p>
+              <ul class="small mb-0 ps-3">
+                {% for accion in rol.acciones %}
+                  <li>{{ accion }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="card shadow-sm border-0 mb-4 comision-section">
+      <div class="card-header comision-section-header">
+        <h2 class="h5 mb-0">Flujo del proceso</h2>
+      </div>
+      <div class="card-body">
+        <ol class="list-unstyled mb-0 sistema-flujo">
+          {% for paso in pasos %}
+          <li class="sistema-paso mb-4 {% if not forloop.last %}pb-4 border-bottom{% endif %}">
+            <div class="d-flex gap-3">
+              <span class="sistema-paso-numero flex-shrink-0" aria-hidden="true">{{ paso.numero }}</span>
+              <div>
+                <h3 class="h6 mb-1">{{ paso.titulo }}</h3>
+                <p class="small text-muted mb-2">{{ paso.detalle }}</p>
+                {% if paso.url_name %}
+                  <a href="{% url paso.url_name %}" class="btn btn-sm btn-outline-primary">
+                    {{ paso.url_etiqueta }}
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </section>
+
+    <div class="row g-4 mb-4">
+      <div class="col-md-6">
+        <section class="card shadow-sm border-0 h-100 comision-section">
+          <div class="card-header comision-section-header">
+            <h2 class="h5 mb-0">Semáforo de habitabilidad</h2>
+          </div>
+          <div class="card-body">
+            <p class="small text-muted">Resultado de cada inspección cerrada:</p>
+            <ul class="list-unstyled mb-0">
+              {% for color, titulo, desc in semaforo %}
+              <li class="comision-semaforo-item mb-3">
+                <span class="semaforo-dot semaforo-{{ color }}"></span>
+                <strong>{{ titulo }}</strong>
+                <span class="d-block small text-muted ms-4 ps-2">{{ desc }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-md-6">
+        <section class="card shadow-sm border-0 h-100 comision-section">
+          <div class="card-header comision-section-header">
+            <h2 class="h5 mb-0">Preguntas frecuentes</h2>
+          </div>
+          <div class="card-body">
+            <dl class="small mb-0">
+              <dt class="mb-1">¿Necesito cuenta para inscribirme?</dt>
+              <dd class="text-muted mb-3">No. La inscripción es pública; solo necesita sus datos y correo.</dd>
+
+              <dt class="mb-1">¿Cuándo recibo usuario y clave?</dt>
+              <dd class="text-muted mb-3">Al certificar su asistencia, el coordinador activa su acceso como inspector.</dd>
+
+              <dt class="mb-1">¿Puedo inscribirme si ya tomé la charla?</dt>
+              <dd class="text-muted mb-3">Sí. El coordinador puede registrar sesiones pasadas y marcar asistencia retroactiva.</dd>
+
+              <dt class="mb-1">¿Dónde consulto el mapa?</dt>
+              <dd class="text-muted mb-0">
+                En el <a href="{% url 'reportes:mapa_edificios' %}">mapa de edificaciones</a>
+                (acceso desde el panel del coordinador).
+              </dd>
+            </dl>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section class="card shadow-sm border-0 mb-4 comision-section">
+      <div class="card-body">
+        <div class="d-grid d-sm-flex flex-wrap gap-2">
+          <a class="btn btn-primary" href="{% url 'capacitacion_public:paso1' %}">Inscribirse a inducción</a>
+          <a class="btn btn-outline-ve" href="{% url 'core:comision' %}">La Comisión</a>
+          <a class="btn btn-outline-secondary" href="{% url 'core:home' %}">Volver al inicio</a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+{% endblock %}
