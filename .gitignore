@@ -35,3 +35,7 @@ desktop.ini
 
 # Word temp
 ~$*.docx
+
+# Subproyectos con repo propio (no versionar dentro de CPEH)
+bi-cruce-inspecciones/
+habitable-deploy/
