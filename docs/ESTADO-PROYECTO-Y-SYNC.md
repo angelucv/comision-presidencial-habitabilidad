@@ -1,15 +1,16 @@
 # CPEH — Estado del proyecto y sincronía Drive
 
-**Última actualización:** 2026-07-22 ~00:40 (UTC-4) · **Equipo:** PC (perfil `Angel`)
+**Última actualización:** 2026-07-22 ~13:00 (UTC-4) · **Equipo:** laptop (perfil `PC`) — fusionado handoff PC NASA + Habitable laptop
 
 ## Producción
 
 | Concepto | Valor |
 |----------|--------|
-| **URL** | https://cpeh-web.onrender.com |
-| **Repo Git** | https://github.com/angelucv/comision-presidencial-habitabilidad |
-| **Rama** | `main` |
-| **Último commit** | `fa61ee8` — navbar responsive |
+| **URL CPEH web** | https://cpeh-web.onrender.com |
+| **URL Habitable BI** | https://habitable.onrender.com |
+| **Repo Git CPEH** | https://github.com/angelucv/comision-presidencial-habitabilidad |
+| **Repo Git Habitable** | https://github.com/angelucv/habitable |
+| **Habitable `main`** | `d8b9386` — nav filtros + descarga cruce; seed `9f252af` (22/07 11:35) |
 | **Plan Render** | Starter (dejó de ser free) |
 
 ### Accesos demo
@@ -87,12 +88,14 @@ Ver también: `instrucciones-cursor/RUTAS-CANONICAS-ESPEJO-DRIVE.md` (cuarta par
 |----------|--------|
 | **Repo Git (privado)** | https://github.com/angelucv/bi-cruce-inspecciones |
 | **Último commit (PC)** | `3dc1be9` — Mapa NASA + análisis 1×10/Habitable/IA |
-| **Deploy hermano** | https://github.com/angelucv/habitable · `2a93718` |
+| **Deploy hermano** | https://github.com/angelucv/habitable · seed/nav laptop `d8b9386` / `9f252af` |
 | **URL BI prod** | https://habitable.onrender.com |
 | **Local** | `Projects\clients\comision-presidencial-habitabilidad\bi-cruce-inspecciones` |
 | **Espejo Drive** | `MisProyectos-Espejo\D-CPEH\bi-cruce-inspecciones` |
 
-**Avance 22-jul 2026:** cruces detallados NASA (2,7 M en local); seed map-lite + cruces en Git; sección **Mapa NASA** y 3 análisis (cola 1×10, confiabilidad Habitable, acuerdo IA). Aviso: `AVISO-PC-A-LAPTOP-CPEH-BI-NASA-2026-07-22.md`. **Drive G: no montado** al cerrar — pendiente `robocopy` → D-CPEH.
+**Avance 22-jul 2026 (PC):** cruces detallados NASA (2,7 M en local); seed map-lite + cruces en Git; sección **Mapa NASA** y 3 análisis (cola 1×10, confiabilidad Habitable, acuerdo IA). Aviso: `AVISO-PC-A-LAPTOP-CPEH-BI-NASA-2026-07-22.md`.
+
+**Avance 22-jul 2026 (laptop):** Habitable seed **22/07/2026 11:35** (~19.126 insp.); fix nav con filtros; pestaña **Descargar cruce territorial**; `robocopy` → D-CPEH al cierre.
 
 **Avance previo (jul 2026):** cruce caso a caso; Habitable corte 21-jul; **1×10 pendientes**; **Mapas de abordaje**; sidebar **Corte de información**.
 
@@ -110,4 +113,4 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-Los parquet con contacto **no** van en Git; generarlos en cada máquina o copiarlos por Drive si hace falta. Seed NASA lite/cruces **sí** vienen en el pull. Avisos: `AVISO-PC-A-LAPTOP-CPEH-BI-NASA-2026-07-22.md` y `AVISO-PC-A-LAPTOP-CPEH-BI-CRUCE-2026-07-20.md`.
+Los parquet con contacto **no** van en Git; generarlos en cada máquina o copiarlos por Drive si hace falta. Aviso handoff: `instrucciones-cursor/AVISO-PC-A-LAPTOP-CPEH-BI-CRUCE-2026-07-20.md`.
