@@ -1,6 +1,6 @@
 # CPEH — Estado del proyecto y sincronía Drive
 
-**Última actualización:** 2026-07-22 ~00:20 (UTC-4) · **Equipo:** PC (perfil `Angel`)
+**Última actualización:** 2026-07-22 ~00:40 (UTC-4) · **Equipo:** PC (perfil `Angel`)
 
 ## Producción
 
@@ -87,7 +87,7 @@ Ver también: `instrucciones-cursor/RUTAS-CANONICAS-ESPEJO-DRIVE.md` (cuarta par
 |----------|--------|
 | **Repo Git (privado)** | https://github.com/angelucv/bi-cruce-inspecciones |
 | **Último commit (PC)** | `3dc1be9` — Mapa NASA + análisis 1×10/Habitable/IA |
-| **Deploy hermano** | https://github.com/angelucv/habitable · `e715e85` |
+| **Deploy hermano** | https://github.com/angelucv/habitable · `2a93718` |
 | **URL BI prod** | https://habitable.onrender.com |
 | **Local** | `Projects\clients\comision-presidencial-habitabilidad\bi-cruce-inspecciones` |
 | **Espejo Drive** | `MisProyectos-Espejo\D-CPEH\bi-cruce-inspecciones` |
