@@ -1,6 +1,6 @@
 # CPEH — Estado del proyecto y sincronía Drive
 
-**Última actualización:** 2026-07-20 ~23:00 (UTC-4) · **Equipo:** PC (perfil `Angel`)
+**Última actualización:** 2026-07-22 ~00:20 (UTC-4) · **Equipo:** PC (perfil `Angel`)
 
 ## Producción
 
@@ -81,17 +81,20 @@ Ver también: `instrucciones-cursor/RUTAS-CANONICAS-ESPEJO-DRIVE.md` (cuarta par
 4. Leer `AVISO-PC-A-LAPTOP-CPEH-2026-06-29.md` en `instrucciones-cursor`.
 5. Abrir workspace: `clients\comision-presidencial-habitabilidad`.
 
-### BI cruce inspecciones (activo — 2026-07-20)
+### BI cruce inspecciones (activo — 2026-07-22)
 
 | Concepto | Valor |
 |----------|--------|
 | **Repo Git (privado)** | https://github.com/angelucv/bi-cruce-inspecciones |
-| **Último commit (PC)** | `3121d66` — mapa operativo compacto |
-| **Deploy hermano** | https://github.com/angelucv/habitable |
+| **Último commit (PC)** | `3dc1be9` — Mapa NASA + análisis 1×10/Habitable/IA |
+| **Deploy hermano** | https://github.com/angelucv/habitable · `e715e85` |
+| **URL BI prod** | https://habitable.onrender.com |
 | **Local** | `Projects\clients\comision-presidencial-habitabilidad\bi-cruce-inspecciones` |
 | **Espejo Drive** | `MisProyectos-Espejo\D-CPEH\bi-cruce-inspecciones` |
 
-**Avance reciente (jul 2026):** cruce caso a caso (Excel contacto); Habitable ~17 k insp.; pestaña **1×10 pendientes** (mapa + listado + análisis descripción); sidebar **Corte de información**; mapa operativo compacto (KPIs en línea, sin scroll largo).
+**Avance 22-jul 2026:** cruces detallados NASA (2,7 M en local); seed map-lite + cruces en Git; sección **Mapa NASA** y 3 análisis (cola 1×10, confiabilidad Habitable, acuerdo IA). Aviso: `AVISO-PC-A-LAPTOP-CPEH-BI-NASA-2026-07-22.md`. **Drive G: no montado** al cerrar — pendiente `robocopy` → D-CPEH.
+
+**Avance previo (jul 2026):** cruce caso a caso; Habitable corte 21-jul; **1×10 pendientes**; **Mapas de abordaje**; sidebar **Corte de información**.
 
 En la laptop (preferible Git):
 
@@ -107,4 +110,4 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-Los parquet con contacto **no** van en Git; generarlos en cada máquina o copiarlos por Drive si hace falta. Aviso handoff: `instrucciones-cursor/AVISO-PC-A-LAPTOP-CPEH-BI-CRUCE-2026-07-20.md`.
+Los parquet con contacto **no** van en Git; generarlos en cada máquina o copiarlos por Drive si hace falta. Seed NASA lite/cruces **sí** vienen en el pull. Avisos: `AVISO-PC-A-LAPTOP-CPEH-BI-NASA-2026-07-22.md` y `AVISO-PC-A-LAPTOP-CPEH-BI-CRUCE-2026-07-20.md`.
